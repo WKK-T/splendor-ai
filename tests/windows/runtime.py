@@ -5,6 +5,46 @@ import platform
 import sys
 
 
+def loaded_runtime_paths(folder):
+    """Observe existing modules after inference; never preload a CRT DLL."""
+    import ctypes
+    from ctypes import wintypes
+    import numpy
+    import torch
+    import wasmtime
+    runtime_dir = (folder / 'runtime').resolve()
+    packages = {}
+    for name, module in [('torch', torch), ('numpy', numpy), ('wasmtime', wasmtime)]:
+        location = Path(module.__file__).resolve()
+        location.relative_to(runtime_dir)
+        packages[name] = str(location)
+    lock_path = Path(__file__).resolve().parents[2] / 'scripts/windows-runtime-lock.json'
+    lock = json.loads(lock_path.read_text(encoding='utf-8'))
+    kernel = ctypes.WinDLL('kernel32', use_last_error=True)
+    kernel.GetModuleHandleW.argtypes = [wintypes.LPCWSTR]
+    kernel.GetModuleHandleW.restype = wintypes.HMODULE
+    kernel.GetModuleFileNameW.argtypes = [wintypes.HMODULE, wintypes.LPWSTR, wintypes.DWORD]
+    kernel.GetModuleFileNameW.restype = wintypes.DWORD
+    loaded = {}
+    for name in lock['vc_runtime']['required_dlls']:
+        handle = kernel.GetModuleHandleW(name)
+        if not handle:
+            loaded[name] = {'status': 'not_loaded', 'path': None}
+            continue
+        buffer = ctypes.create_unicode_buffer(32768)
+        length = kernel.GetModuleFileNameW(handle, buffer, len(buffer))
+        if not length:
+            raise ctypes.WinError(ctypes.get_last_error())
+        assert length < len(buffer), 'Loaded module path was truncated'
+        location = Path(buffer.value).resolve()
+        # A preinstalled system or Visual Studio CRT must not conceal a missing package file.
+        location.relative_to(runtime_dir)
+        loaded[name] = {'status': 'loaded_from_package', 'path': str(location)}
+    for name in ('vcruntime140.dll', 'msvcp140.dll'):
+        assert loaded[name]['status'] == 'loaded_from_package', name + ' was not observed after inference'
+    return {'python_packages': packages, 'vc_runtime_dlls': loaded}
+
+
 def main():
     folder = Path(sys.argv[1]).resolve()
     output = Path(sys.argv[2]).resolve()
@@ -26,6 +66,7 @@ def main():
         assert result['legal_mask'][result['action_index']]
         assert not result['forced'], 'The fixture must exercise real neural inference'
         profiles.append({key: result[key] for key in ['profile', 'model', 'action_index', 'simulations', 'wall_seconds']})
+    loaded = loaded_runtime_paths(folder)
     try:
         runtime.infer(observation, 'hell', cancelled=lambda: True)
     except InterruptedError:
@@ -42,6 +83,7 @@ def main():
     output.write_text(json.dumps({'passed': True, 'windows_execution_performed': True,
         'python': sys.version.split()[0], 'platform': platform.platform(),
         'package_files_verified': len(verified['files']), 'profiles': profiles,
+        'loaded_runtime_paths': loaded,
         'portable_search': True, 'cancelled_inference_rejected': True,
         'private_observation_rejected': True}, indent=2) + '\n', encoding='utf-8')
     print('Bundled Windows Python: all four profiles, integrity and cancellation passed')

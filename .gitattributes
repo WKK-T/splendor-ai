@@ -1,0 +1,8 @@
+# Keep source builds consistent across checkout platforms.
+* text=auto eol=lf
+
+# These files have published byte-level hashes; never rewrite line endings.
+/licenses/** -text
+/local-models/** -text
+/LICENSE -text
+/THIRD_PARTY_NOTICES.md -text
