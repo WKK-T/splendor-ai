@@ -6,6 +6,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
 from pathlib import Path
+import socket
 import sys
 import threading
 import time
@@ -23,6 +24,17 @@ IDENTITY = 'splendor-local-game/1'
 RUNTIME = None
 PENDING = {}
 LOCK = threading.Lock()
+
+
+class LocalHTTPServer(ThreadingHTTPServer):
+    # On Winsock, SO_REUSEADDR can let a second process bind an occupied port.
+    # Keep POSIX restart behavior, but require exclusive ownership on Windows.
+    allow_reuse_address = sys.platform != 'win32'
+
+    def server_bind(self):
+        if sys.platform == 'win32':
+            self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+        super().server_bind()
 
 
 def adapt_observation(raw, original_mask):
@@ -153,7 +165,7 @@ def main():
     RUNTIME=Runtime()
     server=None
     for port in range(args.port,args.port+20):
-        try:server=ThreadingHTTPServer(('127.0.0.1',port),Handler);break
+        try:server=LocalHTTPServer(('127.0.0.1',port),Handler);break
         except OSError:
             try:
                 with urllib.request.urlopen(f'http://127.0.0.1:{port}/api/health',timeout=.4) as reply:state=json.load(reply)

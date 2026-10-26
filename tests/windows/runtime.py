@@ -45,6 +45,29 @@ def loaded_runtime_paths(folder):
     return {'python_packages': packages, 'vc_runtime_dlls': loaded}
 
 
+def exclusive_listener(folder):
+    """Verify the packaged server itself protects its socket against reuse."""
+    import socket
+    sys.path.insert(0, str(folder / 'app'))
+    import server
+    http = server.LocalHTTPServer(('127.0.0.1', 0), server.Handler)
+    try:
+        options = {'exclusive_addruse': http.socket.getsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE),
+                   'reuse_addr': http.socket.getsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR)}
+        assert options == {'exclusive_addruse': 1, 'reuse_addr': 0}, options
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:
+            probe.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            try:
+                probe.bind(('127.0.0.1', http.server_port))
+            except OSError as exc:
+                assert exc.winerror in (10013, 10048), exc
+            else:
+                raise AssertionError('A second socket was able to reuse the game port')
+        return {**options, 'second_bind_rejected': True}
+    finally:
+        http.server_close()
+
+
 def main():
     folder = Path(sys.argv[1]).resolve()
     output = Path(sys.argv[2]).resolve()
@@ -67,6 +90,7 @@ def main():
         assert not result['forced'], 'The fixture must exercise real neural inference'
         profiles.append({key: result[key] for key in ['profile', 'model', 'action_index', 'simulations', 'wall_seconds']})
     loaded = loaded_runtime_paths(folder)
+    listener = exclusive_listener(folder)
     try:
         runtime.infer(observation, 'hell', cancelled=lambda: True)
     except InterruptedError:
@@ -84,6 +108,7 @@ def main():
         'python': sys.version.split()[0], 'platform': platform.platform(),
         'package_files_verified': len(verified['files']), 'profiles': profiles,
         'loaded_runtime_paths': loaded,
+        'exclusive_listener': listener,
         'portable_search': True, 'cancelled_inference_rejected': True,
         'private_observation_rejected': True}, indent=2) + '\n', encoding='utf-8')
     print('Bundled Windows Python: all four profiles, integrity and cancellation passed')

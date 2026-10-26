@@ -6,6 +6,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
 from pathlib import Path
+import socket
 import subprocess
 import sys
 import threading
@@ -36,6 +37,14 @@ class OtherService(BaseHTTPRequestHandler):
 
     def log_message(self, *args):
         pass
+
+
+class ExclusiveTestServer(ThreadingHTTPServer):
+    allow_reuse_address = False
+
+    def server_bind(self):
+        self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+        super().server_bind()
 
 
 def main():
@@ -82,7 +91,17 @@ def main():
     assert result['passed'] is True
     subprocess.run([str(python), '-X', 'utf8', '-s', '-B', str(ROOT / 'tests/windows/runtime.py'),
                     str(folder), str(output / 'runtime.json')], cwd=output, env=env, check=True, timeout=300)
-    blocker = ThreadingHTTPServer(('127.0.0.1', 8780), OtherService)
+    blocker = ExclusiveTestServer(('127.0.0.1', 8780), OtherService)
+    assert blocker.socket.getsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE) == 1
+    assert blocker.socket.getsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR) == 0
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as probe:
+        probe.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        try:
+            probe.bind(('127.0.0.1', 8780))
+        except OSError as exc:
+            assert exc.winerror in (10013, 10048), exc
+        else:
+            raise AssertionError('Default-port fixture did not acquire exclusive ownership')
     threading.Thread(target=blocker.serve_forever, daemon=True).start()
     launch = folder / '启动游戏.bat'
     assert launch.is_file(), 'Chinese launch script missing'
@@ -123,6 +142,7 @@ def main():
             'archive_sha256': sha256(archive), 'archive_bytes': archive.stat().st_size,
             'manifest_files_verified': len(manifest), 'chinese_and_space_path': True,
             'actual_batch_launcher': True, 'port_conflict_fallback': port != 8780,
+            'default_port_exclusively_occupied': True,
             'loopback_only': True, 'port': port,
             'runtime': json.loads((output / 'runtime.json').read_text(encoding='utf-8')),
             'browser': json.loads((output / 'browser.json').read_text(encoding='utf-8'))}
