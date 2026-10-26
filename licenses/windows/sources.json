@@ -1,0 +1,59 @@
+{
+  "format": "splendor-windows-license-sources/1",
+  "notes": [
+    "Original Microsoft documents are preserved byte-for-byte. HTML pages use .html.txt to prevent scripts from executing when opened locally.",
+    "Only the Visual Studio license and redistribution list matching the actual installed toolchain belong in a build; do not treat the runtime-use EULA as a redistribution grant."
+  ],
+  "files": [
+    {
+      "filename": "vs2022-enterprise-professional-license.docx",
+      "url": "https://visualstudio.microsoft.com/wp-content/uploads/2021/11/Visual-Studio-2022-Enterprise-Professional-License-EN.docx",
+      "resolved_url": "https://visualstudio.microsoft.com/wp-content/uploads/2021/11/Visual-Studio-2022-Enterprise-Professional-License-EN.docx",
+      "sha256": "9c0cd52b20db9d081854c75bd1b50c75514b8f8cb09c8cad15e89d90b97b5bf3",
+      "bytes": 63513,
+      "retrieved_at": "2026-10-26T03:27:29.918550+00:00",
+      "kind": "visual_studio_license",
+      "visual_studio_year": "2022"
+    },
+    {
+      "filename": "vs2026-enterprise-professional-license.docx",
+      "url": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual_Studio_2026-License-Enterprise_Professional_ENU.docx",
+      "resolved_url": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual_Studio_2026-License-Enterprise_Professional_ENU.docx",
+      "sha256": "dd2ab92a7c2bb90dd509e16572707a34b13bc0bc09b9199d115f25594ac39053",
+      "bytes": 67523,
+      "retrieved_at": "2026-10-26T03:27:30.244891+00:00",
+      "kind": "visual_studio_license",
+      "visual_studio_year": "2026"
+    },
+    {
+      "filename": "vs2022-redistribution.html.txt",
+      "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution",
+      "resolved_url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution",
+      "sha256": "22c07c097c3eaf8ec93a841b760e25ad75a40718f3ccc3d2f83cd8eeef68a324",
+      "bytes": 62616,
+      "retrieved_at": "2026-10-26T03:27:30.743485+00:00",
+      "kind": "redistribution_list",
+      "visual_studio_year": "2022"
+    },
+    {
+      "filename": "vs2026-redistribution.html.txt",
+      "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/redistribution",
+      "resolved_url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/redistribution",
+      "sha256": "d9016045dd3b14190c12c8809382d57a8ea00f62e9ee98229072a0530eab315b",
+      "bytes": 48465,
+      "retrieved_at": "2026-10-26T03:27:31.123498+00:00",
+      "kind": "redistribution_list",
+      "visual_studio_year": "2026"
+    },
+    {
+      "filename": "vc-runtime-license-reference.docx",
+      "url": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual-C-V14-License-Redistributable_and_Runtime_ENU.docx",
+      "resolved_url": "https://visualstudio.microsoft.com/wp-content/uploads/2025/10/Visual-C-V14-License-Redistributable_and_Runtime_ENU.docx",
+      "sha256": "08651651a7602fc7c0e2763de0fde1ff9f868df2780597cd1775ee9d6441c783",
+      "bytes": 39553,
+      "retrieved_at": "2026-10-26T03:27:31.386572+00:00",
+      "kind": "runtime_use_license_reference",
+      "visual_studio_year": null
+    }
+  ]
+}
