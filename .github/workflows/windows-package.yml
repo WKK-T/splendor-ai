@@ -1,0 +1,73 @@
+name: Windows package validation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2025-vs2026
+    timeout-minutes: 25
+    env:
+      PYTHONUTF8: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Download and verify frozen model weights
+        run: python scripts/download_models.py
+      - name: Download the hash-locked Windows runtime
+        run: python scripts/download_windows_runtime.py
+      - name: Build using licensed Visual Studio REDIST components
+        run: |
+          python play/build.py --local-game --output-dir local-game/web
+          python scripts/build_windows_package.py
+      - name: Preserve the candidate for both validation systems
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: windows-package
+          path: |
+            dist/splendor-ai-windows-x64-v1.0.0.zip
+            dist/splendor-ai-windows-x64-v1.0.0.zip.sha256
+          compression-level: 0
+          retention-days: 14
+
+  validate:
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, windows-2025]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    env:
+      PYTHONUTF8: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: windows-package
+          path: dist
+      - name: Install browser test driver
+        run: npm install --no-save --package-lock=false playwright@1.64.1
+      - name: Test the same extracted ZIP with its bundled Python and Edge
+        run: python tests/windows/run.py --archive dist/splendor-ai-windows-x64-v1.0.0.zip --output output/windows-validation
+      - name: Upload validation evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: validation-${{ matrix.os }}
+          path: |
+            output/windows-validation/*.json
+            output/windows-validation/*.log
+            output/windows-validation/*.png
+          if-no-files-found: warn
+          retention-days: 14
