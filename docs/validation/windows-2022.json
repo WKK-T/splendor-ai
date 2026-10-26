@@ -1,0 +1,373 @@
+{
+  "passed": true,
+  "windows_execution_performed": true,
+  "archive_sha256": "dd563b2ca00315b02bb7caecd3639e8f2098d88b1097c63fa468eef8127e8861",
+  "archive_bytes": 220003109,
+  "manifest_files_verified": 6674,
+  "chinese_and_space_path": true,
+  "actual_batch_launcher": true,
+  "port_conflict_fallback": true,
+  "default_port_exclusively_occupied": true,
+  "loopback_only": true,
+  "port": 8781,
+  "runtime": {
+    "passed": true,
+    "windows_execution_performed": true,
+    "python": "3.12.10",
+    "platform": "Windows-2022Server-10.0.20348-SP0",
+    "package_files_verified": 24,
+    "profiles": [
+      {
+        "profile": "easy",
+        "model": "s422-100M",
+        "action_index": 15,
+        "simulations": 0,
+        "wall_seconds": 0.1756108000000154
+      },
+      {
+        "profile": "medium",
+        "model": "s422-200M",
+        "action_index": 17,
+        "simulations": 0,
+        "wall_seconds": 0.051458300000007284
+      },
+      {
+        "profile": "hard",
+        "model": "PV422",
+        "action_index": 21,
+        "simulations": 128,
+        "wall_seconds": 4.303376600000007
+      },
+      {
+        "profile": "hell",
+        "model": "PV422",
+        "action_index": 21,
+        "simulations": 256,
+        "wall_seconds": 8.054278699999998
+      }
+    ],
+    "loaded_runtime_paths": {
+      "python_packages": {
+        "torch": "D:\\a\\splendor-ai\\splendor-ai\\output\\windows-validation\\中文 解压验证\\splendor-ai-windows-x64-v1.0.0\\runtime\\Lib\\site-packages\\torch\\__init__.py",
+        "numpy": "D:\\a\\splendor-ai\\splendor-ai\\output\\windows-validation\\中文 解压验证\\splendor-ai-windows-x64-v1.0.0\\runtime\\Lib\\site-packages\\numpy\\__init__.py",
+        "wasmtime": "D:\\a\\splendor-ai\\splendor-ai\\output\\windows-validation\\中文 解压验证\\splendor-ai-windows-x64-v1.0.0\\runtime\\Lib\\site-packages\\wasmtime\\__init__.py"
+      },
+      "vc_runtime_dlls": {
+        "concrt140.dll": {
+          "status": "not_loaded",
+          "path": null
+        },
+        "msvcp140.dll": {
+          "status": "loaded_from_package",
+          "path": "D:\\a\\splendor-ai\\splendor-ai\\output\\windows-validation\\中文 解压验证\\splendor-ai-windows-x64-v1.0.0\\runtime\\msvcp140.dll"
+        },
+        "msvcp140_atomic_wait.dll": {
+          "status": "loaded_from_package",
+          "path": "D:\\a\\splendor-ai\\splendor-ai\\output\\windows-validation\\中文 解压验证\\splendor-ai-windows-x64-v1.0.0\\runtime\\msvcp140_atomic_wait.dll"
+        },
+        "vcruntime140.dll": {
+          "status": "loaded_from_package",
+          "path": "D:\\a\\splendor-ai\\splendor-ai\\output\\windows-validation\\中文 解压验证\\splendor-ai-windows-x64-v1.0.0\\runtime\\vcruntime140.dll"
+        },
+        "vcruntime140_1.dll": {
+          "status": "loaded_from_package",
+          "path": "D:\\a\\splendor-ai\\splendor-ai\\output\\windows-validation\\中文 解压验证\\splendor-ai-windows-x64-v1.0.0\\runtime\\vcruntime140_1.dll"
+        },
+        "vcruntime140_threads.dll": {
+          "status": "loaded_from_package",
+          "path": "D:\\a\\splendor-ai\\splendor-ai\\output\\windows-validation\\中文 解压验证\\splendor-ai-windows-x64-v1.0.0\\runtime\\vcruntime140_threads.dll"
+        }
+      }
+    },
+    "exclusive_listener": {
+      "exclusive_addruse": 1,
+      "reuse_addr": 0,
+      "second_bind_rejected": true
+    },
+    "portable_search": true,
+    "cancelled_inference_rejected": true,
+    "private_observation_rejected": true
+  },
+  "browser": {
+    "passed": true,
+    "browser": "156.0.4314.42",
+    "checks": [
+      {
+        "name": "Bundled local page renders all public cards",
+        "pass": true
+      },
+      {
+        "name": "Simple bot and all four local profiles appear",
+        "pass": true
+      },
+      {
+        "name": "Original five gem companions retained",
+        "pass": true
+      },
+      {
+        "name": "Project and third-party licenses embedded",
+        "pass": true
+      },
+      {
+        "name": "easy makes a real legal move with exact model/budget",
+        "pass": true,
+        "detail": {
+          "decision": {
+            "session": 2,
+            "revision": 2,
+            "actor": 0,
+            "phase": "Play",
+            "model_id": "s422-100M",
+            "weights_sha256": "17d75ad26a7134a7874b2fbc873061e56cfb7b4ec5a920231c8f7dca676d993d",
+            "index": 21,
+            "elapsed_ms": 226.5444999999886,
+            "simulations": 0
+          },
+          "error": "",
+          "session": 2,
+          "log": 1
+        }
+      },
+      {
+        "name": "medium makes a real legal move with exact model/budget",
+        "pass": true,
+        "detail": {
+          "decision": {
+            "session": 3,
+            "revision": 4,
+            "actor": 0,
+            "phase": "Play",
+            "model_id": "s422-200M",
+            "weights_sha256": "a0c73a3c5d6b8f71704c98a53da2848be2a63e33c4cad563f7ddf060def4600e",
+            "index": 17,
+            "elapsed_ms": 77.43080000000191,
+            "simulations": 0
+          },
+          "error": "",
+          "session": 3,
+          "log": 1
+        }
+      },
+      {
+        "name": "hard makes a real legal move with exact model/budget",
+        "pass": true,
+        "detail": {
+          "decision": {
+            "session": 4,
+            "revision": 6,
+            "actor": 0,
+            "phase": "Play",
+            "model_id": "PV422",
+            "weights_sha256": "cef25fcd177d96d7e8aa458756f27553ba550f4fd7a131c8d5217386e5ff545e",
+            "index": 21,
+            "elapsed_ms": 4518.85729999998,
+            "simulations": 128
+          },
+          "error": "",
+          "session": 4,
+          "log": 1
+        }
+      },
+      {
+        "name": "hell makes a real legal move with exact model/budget",
+        "pass": true,
+        "detail": {
+          "decision": {
+            "session": 5,
+            "revision": 8,
+            "actor": 0,
+            "phase": "Play",
+            "model_id": "PV422",
+            "weights_sha256": "cef25fcd177d96d7e8aa458756f27553ba550f4fd7a131c8d5217386e5ff545e",
+            "index": 21,
+            "elapsed_ms": 8446.44790000001,
+            "simulations": 256
+          },
+          "error": "",
+          "session": 5,
+          "log": 1
+        }
+      },
+      {
+        "name": "Hell hint is independent of easy opponent and does not play",
+        "pass": true
+      },
+      {
+        "name": "Hint explains an identifiable action in Chinese",
+        "pass": true
+      },
+      {
+        "name": "Hints can be disabled without changing the opponent",
+        "pass": true
+      },
+      {
+        "name": "medium settles pay",
+        "pass": true,
+        "detail": {
+          "phases": [
+            "PayCard",
+            "PayCard",
+            "PayCard"
+          ],
+          "ended": true
+        }
+      },
+      {
+        "name": "medium settles discard",
+        "pass": true,
+        "detail": {
+          "phases": [
+            "Discard"
+          ],
+          "ended": true
+        }
+      },
+      {
+        "name": "medium settles noble",
+        "pass": true,
+        "detail": {
+          "phases": [
+            "ChooseNoble"
+          ],
+          "ended": true
+        }
+      },
+      {
+        "name": "hard settles pay",
+        "pass": true,
+        "detail": {
+          "phases": [
+            "PayCard",
+            "PayCard",
+            "PayCard"
+          ],
+          "ended": true
+        }
+      },
+      {
+        "name": "hard settles discard",
+        "pass": true,
+        "detail": {
+          "phases": [
+            "Discard"
+          ],
+          "ended": true
+        }
+      },
+      {
+        "name": "hard settles noble",
+        "pass": true,
+        "detail": {
+          "phases": [
+            "ChooseNoble"
+          ],
+          "ended": true
+        }
+      },
+      {
+        "name": "hell settles pay",
+        "pass": true,
+        "detail": {
+          "phases": [
+            "PayCard",
+            "PayCard",
+            "PayCard"
+          ],
+          "ended": true
+        }
+      },
+      {
+        "name": "hell settles discard",
+        "pass": true,
+        "detail": {
+          "phases": [
+            "Discard"
+          ],
+          "ended": true
+        }
+      },
+      {
+        "name": "hell settles noble",
+        "pass": true,
+        "detail": {
+          "phases": [
+            "ChooseNoble"
+          ],
+          "ended": true
+        }
+      },
+      {
+        "name": "simple completes a full local game",
+        "pass": true,
+        "detail": {
+          "mode": "simple",
+          "moves": 55,
+          "over": true,
+          "error": "",
+          "winners": [
+            1
+          ]
+        }
+      },
+      {
+        "name": "medium completes a full local game",
+        "pass": true,
+        "detail": {
+          "mode": "medium",
+          "moves": 51,
+          "over": true,
+          "error": "",
+          "winners": [
+            1
+          ]
+        }
+      },
+      {
+        "name": "Model weights are not exposed as HTTP files",
+        "pass": true
+      },
+      {
+        "name": "Foreign origin rejected",
+        "pass": true
+      },
+      {
+        "name": "Missing local request header rejected",
+        "pass": true
+      },
+      {
+        "name": "Private observation fields rejected",
+        "pass": true
+      },
+      {
+        "name": "Unknown model profile rejected",
+        "pass": true
+      },
+      {
+        "name": "Cancellation endpoint accepts request 0",
+        "pass": true
+      },
+      {
+        "name": "In-flight PV search is actually cancelled",
+        "pass": true
+      },
+      {
+        "name": "New game discards an in-flight hint",
+        "pass": true
+      },
+      {
+        "name": "No external service is contacted",
+        "pass": true,
+        "detail": []
+      },
+      {
+        "name": "No browser script errors",
+        "pass": true,
+        "detail": []
+      }
+    ],
+    "errors": [],
+    "external_requests": []
+  },
+  "workflow_url": "https://github.com/WKK-T/splendor-ai/actions/runs/40265494419",
+  "build_commit": "6a5775b1ee4288d8e65e7ea62e6892e77635de73"
+}

@@ -18,3 +18,31 @@
 页面版权元数据加入后另外完成离线启动检查，模型与游戏逻辑未变化。可复跑的行为测试、验收测试和构建说明见 [开发说明](development.md)。
 
 以上是功能与集成测试，不是人类棋力评级，也不是所有硬件与浏览器的兼容性承诺。Mac 包自带运行环境，未做 Apple 开发者签名或公证。
+
+## Windows x64 补充发布
+
+2026-10-26，通过 [Windows 发布工作流](https://github.com/WKK-T/splendor-ai/actions/runs/40265494419) 构建并验证同一份最终 ZIP。构建源码为 [`6a5775b`](https://github.com/WKK-T/splendor-ai/tree/6a5775b1ee4288d8e65e7ea62e6892e77635de73)，v1.0.0 原标签及已有浏览器／Mac 附件保持不变。
+
+| 验证对象 | Windows Server 2022 | Windows Server 2025 |
+| --- | --- | --- |
+| ZIP CRC、6,674 个清单文件的 SHA-256 | 通过 | 通过 |
+| 中文／空格路径、实际启动 BAT 与包内 Python | 通过 | 通过 |
+| 端口占用时从 8780 切换到 8781，仅监听 127.0.0.1 | 通过 | 通过 |
+| 游戏监听端口拒绝其他 socket 重复绑定 | 通过 | 通过 |
+| 简单／中等正确权重、PV422 实际 128／256 次模拟 | 通过 | 通过 |
+| 推理依赖和已加载的 VC Runtime 均来自包内 | 通过 | 通过 |
+| 页面行为检查：五种对手、独立地狱提示、付款／弃还／贵族、取消和请求边界 | 32 项通过 | 32 项通过 |
+| 简单机器人与中等模型完整对局 | 2 局完成 | 2 局完成 |
+| 页面脚本错误／游戏外部服务请求 | 0／0 | 0／0 |
+
+完整机器验收回执：[Windows Server 2022](validation/windows-2022.json)、[Windows Server 2025](validation/windows-2025.json)。运行时使用包内 Python 3.12.10 与 CPU 推理依赖，没有使用构建机的 Python 代替用户运行环境。
+
+发布文件 `splendor-ai-windows-x64-v1.0.0.zip` 为 **220,003,109 字节**，SHA-256：
+
+```text
+dd563b2ca00315b02bb7caecd3639e8f2098d88b1097c63fa468eef8127e8861
+```
+
+Windows 适配中修复了检出换行转换引起的冻结文件校验失败，以及 Winsock 端口复用导致的重复绑定。最终发布的是上述工作流验证的 ZIP，没有在验收后重新构建。
+
+此包面向 Windows 10/11 的 Intel／AMD x64 电脑。当前实际测试环境是云端 Windows Server 2022／2025，**尚未覆盖 Windows 10/11 实机**；没有进行代码签名。启动说明见 [Windows 本地版](windows.md)。
