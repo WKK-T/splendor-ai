@@ -1,0 +1,57 @@
+/* The companion is separate from game rendering, so clocks and hints never
+   replace a focused control or restart a drag. */
+.companion{position:fixed;width:max(54px,calc(114px * var(--companion-scale,1)));height:calc(141px * var(--companion-scale,1) + 26px);z-index:35;user-select:none;pointer-events:none}
+.companion button{font:inherit}
+.companion-toggle{border:0;background:transparent;padding:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;cursor:grab;touch-action:none;border-radius:14px;pointer-events:none}
+.companion-toggle img{width:calc(105px * var(--companion-scale,1));height:calc(141px * var(--companion-scale,1));object-fit:contain;flex:none;image-rendering:pixelated;pointer-events:auto;clip-path:url(#companion-hit-clip);animation:companion-idle 4s steps(2,end) infinite;transform-origin:bottom center}
+.companion-hit-defs{position:absolute;pointer-events:none}
+.companion-toggle span{pointer-events:auto;background:#fffaf0eF;border:1px solid #cdbda2;border-radius:20px;padding:3px 14px;font-size:11px;line-height:16px;color:#6c6255;box-shadow:0 2px 6px #4e46300d}
+.companion-toggle:focus-visible,.companion button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.companion.dragging .companion-toggle,.companion.dragging .companion-collapse{cursor:grabbing}
+.companion.dragging img,.companion-toggle:active img{animation:none;transform:rotate(-4deg)}
+.companion-collapse{pointer-events:auto;touch-action:none;position:absolute;right:3px;top:6px;z-index:1;border:1px solid #ded4c2;border-radius:50%;width:24px;height:24px;background:#fffaf0;color:#817665;cursor:pointer;font-size:15px!important}
+.companion.collapsed{width:48px;height:36px}
+.companion.collapsed .companion-toggle{display:none}
+.companion.collapsed .companion-collapse{inset:0;width:48px;height:32px;border-radius:18px;font-size:11px!important;cursor:grab}
+.companion-panel{position:fixed;z-index:36;width:330px;max-width:calc(100vw - 16px);max-height:calc(100dvh - 16px);overflow:auto;padding:18px;border:1px solid #d4c6ae;border-radius:16px;background:#fffcf5;box-shadow:0 12px 42px #51402a26;font-size:12px;line-height:1.65}
+.companion-panel[hidden]{display:none}
+.companion-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.companion-heading h2{font-size:18px;margin:2px 0}
+.hint-actions{display:flex;gap:8px;margin:12px 0}
+.hint-actions button{flex:1;min-height:36px;font-size:12px}
+#hint-result{padding:12px;border:1px solid #e7decf;background:#f5f1e7;border-radius:9px;overflow-wrap:anywhere}
+#hint-result ol{padding-left:20px;margin:8px 0 4px}
+#hint-result li+li{margin-top:6px}
+.hint-note{font-size:11px;color:var(--muted);margin:4px 0;line-height:1.6}
+#hint-result .hint-note{margin-top:8px}
+.hint-provenance{font-size:10px;color:#918674;margin:12px 0 0}
+.companion-settings{border:0;border-bottom:1px solid var(--line);padding:0 0 13px;margin:0 0 16px}
+.companion-settings legend{font-size:12px;font-weight:600;margin-bottom:10px}
+.companion-choices{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.companion-choice{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;padding:6px 2px;border:1px solid #e3d9ca;border-radius:9px;background:#f8f4ec;color:#706657;cursor:pointer}
+.companion-choice img{width:100%;height:76px;object-fit:contain;image-rendering:pixelated}
+.companion-choice span{font-size:10px;white-space:nowrap}
+.companion-choice[aria-pressed=true]{border-color:#8d9c86;background:#edf0e7;box-shadow:inset 0 0 0 1px #8d9c86}
+.companion-settings-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px;font-size:10px;color:var(--muted)}
+.companion-settings-footer button{font-size:11px;padding:4px;margin-left:auto}
+#settings-dialog{max-height:calc(100dvh - 24px);overflow:auto}
+@keyframes companion-idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@media(max-width:700px){body{padding-bottom:calc(141px * var(--companion-scale,1) + 42px)}.companion-choice img{height:64px}.companion-choices{gap:4px}.companion-panel{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.companion img{animation:none!important;transform:none!important}}
+
+.companion-styles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.companion-style-choice{display:flex;align-items:center;justify-content:flex-start;gap:10px;min-width:0;padding:8px 10px;border:1px solid #e3d9ca;border-radius:9px;background:#f8f4ec;color:#706657;text-align:left;cursor:pointer}
+.companion-style-choice img{width:40px;height:48px;object-fit:contain;image-rendering:pixelated;flex:none}
+.companion-style-choice strong{display:block;font-size:12px;font-weight:600;white-space:nowrap}
+.companion-style-choice small{display:block;margin-top:4px;font-size:9px;color:var(--muted);white-space:nowrap}
+.companion-style-choice[aria-pressed=true]{border-color:#8d9c86;background:#edf0e7;box-shadow:inset 0 0 0 1px #8d9c86}
+.companion-style-choice:focus-visible,.companion-choice:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:420px){.companion-style-choice{padding:7px 5px;gap:5px}.companion-style-choice img{width:30px;height:42px}.companion-style-choice small{font-size:8px}}
+
+.companion-size-settings{display:grid;grid-template-columns:minmax(0,1fr) 84px;align-items:center;gap:12px;margin-top:12px;border-top:1px solid var(--line);padding-top:8px}
+.companion-size-heading{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:11px}
+.companion-size-heading output{color:var(--accent);margin-left:5px;font-variant-numeric:tabular-nums}
+.companion-size-heading button{font-size:10px;padding:4px 0}
+#companion-size{width:100%;margin:12px 0 5px;accent-color:#83967c;cursor:pointer}
+.companion-size-swatch{height:104px;display:flex;align-items:center;justify-content:center;background:#f5f1e7;border-radius:8px;overflow:hidden}
+.companion-size-swatch img{width:calc(35px * var(--companion-scale,1));height:calc(47px * var(--companion-scale,1));object-fit:contain;image-rendering:pixelated}

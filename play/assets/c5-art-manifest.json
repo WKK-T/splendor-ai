@@ -1,0 +1,633 @@
+{
+  "format": "splendor-c5-art/1",
+  "complete": true,
+  "expected_count": 70,
+  "variants_per_tier": [
+    5,
+    5,
+    4
+  ],
+  "entries": [
+    {
+      "key": "white-t1-v0",
+      "colour": 0,
+      "tier": 1,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        0,
+        0
+      ]
+    },
+    {
+      "key": "white-t1-v1",
+      "colour": 0,
+      "tier": 1,
+      "variant": 1,
+      "source": "assets/c5-variants/white-t1-v1.webp",
+      "sha256": "041fd3b182e6868c7fa5613564a09c68580f4d2d431a45144ae3a6513fbc3a3d"
+    },
+    {
+      "key": "white-t1-v2",
+      "colour": 0,
+      "tier": 1,
+      "variant": 2,
+      "source": "assets/c5-variants/white-t1-v2.webp",
+      "sha256": "cce2c12d0817fd7df016d78e156770cfeb9ac78117ca338f350d9af457e102f5"
+    },
+    {
+      "key": "white-t1-v3",
+      "colour": 0,
+      "tier": 1,
+      "variant": 3,
+      "source": "assets/c5-variants/white-t1-v3.webp",
+      "sha256": "17168adcbd14493c55fa6544f7db99cc5364a9d0bc2f00dfd7f4699eee2ed659"
+    },
+    {
+      "key": "white-t1-v4",
+      "colour": 0,
+      "tier": 1,
+      "variant": 4,
+      "source": "assets/c5-variants/white-t1-v4.webp",
+      "sha256": "a361577bdca0019d7114a2b59f87ed66af39f1103ddbc6f3c07fa5b402cd6709"
+    },
+    {
+      "key": "white-t2-v0",
+      "colour": 0,
+      "tier": 2,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": "white-t2-v1",
+      "colour": 0,
+      "tier": 2,
+      "variant": 1,
+      "source": "assets/c5-variants/white-t2-v1.webp",
+      "sha256": "67959a5e2bc6b4720a3bd23655c226ec18bf9645e595591d468b0bc8aa28aa42"
+    },
+    {
+      "key": "white-t2-v2",
+      "colour": 0,
+      "tier": 2,
+      "variant": 2,
+      "source": "assets/c5-variants/white-t2-v2.webp",
+      "sha256": "36b2cad7514e00979ee50f54650de0872a26a9eba2fe200a1bd4e5e4bc4f266a"
+    },
+    {
+      "key": "white-t2-v3",
+      "colour": 0,
+      "tier": 2,
+      "variant": 3,
+      "source": "assets/c5-variants/white-t2-v3.webp",
+      "sha256": "b47bb949c33e0e3914152323706470c65a5741cbe363666465a0d39c1505fca8"
+    },
+    {
+      "key": "white-t2-v4",
+      "colour": 0,
+      "tier": 2,
+      "variant": 4,
+      "source": "assets/c5-variants/white-t2-v4.webp",
+      "sha256": "0f7fbbede85b8ad285f84c7df7eb1263bb4a95d0f79ab553e39199bd356bec71"
+    },
+    {
+      "key": "white-t3-v0",
+      "colour": 0,
+      "tier": 3,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        0,
+        2
+      ]
+    },
+    {
+      "key": "white-t3-v1",
+      "colour": 0,
+      "tier": 3,
+      "variant": 1,
+      "source": "assets/c5-variants/white-t3-v1.webp",
+      "sha256": "537a92c58df1d65e443f244f1e01dd57058db4ac74252f5c797fa5ebb967bfa0"
+    },
+    {
+      "key": "white-t3-v2",
+      "colour": 0,
+      "tier": 3,
+      "variant": 2,
+      "source": "assets/c5-variants/white-t3-v2.webp",
+      "sha256": "9345ed090591a609fbcc6da1c33f4f54ff576e8cc0e441327c91731e6b0743e7"
+    },
+    {
+      "key": "white-t3-v3",
+      "colour": 0,
+      "tier": 3,
+      "variant": 3,
+      "source": "assets/c5-variants/white-t3-v3.webp",
+      "sha256": "af7d379cc54bcd16a62a187c7323b7bb6359f8830c08ce1b297fa0f7bc5a2fa8"
+    },
+    {
+      "key": "blue-t1-v0",
+      "colour": 1,
+      "tier": 1,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        1,
+        0
+      ]
+    },
+    {
+      "key": "blue-t1-v1",
+      "colour": 1,
+      "tier": 1,
+      "variant": 1,
+      "source": "assets/c5-variants/blue-t1-v1.webp",
+      "sha256": "b4f7e6af680bb704263c41e1981a656621cb677b8d9b3fe8d8d4727701ee36e1"
+    },
+    {
+      "key": "blue-t1-v2",
+      "colour": 1,
+      "tier": 1,
+      "variant": 2,
+      "source": "assets/c5-variants/blue-t1-v2.webp",
+      "sha256": "e009bb85f10c406d48d6e29d2883abcae604aec4a0793eca5bc166559124abe6"
+    },
+    {
+      "key": "blue-t1-v3",
+      "colour": 1,
+      "tier": 1,
+      "variant": 3,
+      "source": "assets/c5-variants/blue-t1-v3.webp",
+      "sha256": "484f96679dd8e6a7a5145db3da76862a6980420209beae59a058bc71a0361791"
+    },
+    {
+      "key": "blue-t1-v4",
+      "colour": 1,
+      "tier": 1,
+      "variant": 4,
+      "source": "assets/c5-variants/blue-t1-v4.webp",
+      "sha256": "2264f831d5c7971379383245788f866a9a226e84283f90ef719b74b2160f829a"
+    },
+    {
+      "key": "blue-t2-v0",
+      "colour": 1,
+      "tier": 2,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        1,
+        1
+      ]
+    },
+    {
+      "key": "blue-t2-v1",
+      "colour": 1,
+      "tier": 2,
+      "variant": 1,
+      "source": "assets/c5-variants/blue-t2-v1.webp",
+      "sha256": "d879025515b53a54e948f6164164cbe8a5621180cd2b586c63fb6711869cfee2"
+    },
+    {
+      "key": "blue-t2-v2",
+      "colour": 1,
+      "tier": 2,
+      "variant": 2,
+      "source": "assets/c5-variants/blue-t2-v2.webp",
+      "sha256": "f9cce2ffed4105eb09cd203ecf40106dd6c23274a0fd6f93d5776292fb5f989c"
+    },
+    {
+      "key": "blue-t2-v3",
+      "colour": 1,
+      "tier": 2,
+      "variant": 3,
+      "source": "assets/c5-variants/blue-t2-v3.webp",
+      "sha256": "fcaf6bc49418f4e50ffb5797ae078b7555b0313822da2f671a913e649663ab3e"
+    },
+    {
+      "key": "blue-t2-v4",
+      "colour": 1,
+      "tier": 2,
+      "variant": 4,
+      "source": "assets/c5-variants/blue-t2-v4.webp",
+      "sha256": "ca0bb738b7556f78fdecb0fbb507037a2d5e2e0e0d4c05ec6c5eca4aadbd8b5e"
+    },
+    {
+      "key": "blue-t3-v0",
+      "colour": 1,
+      "tier": 3,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        1,
+        2
+      ]
+    },
+    {
+      "key": "blue-t3-v1",
+      "colour": 1,
+      "tier": 3,
+      "variant": 1,
+      "source": "assets/c5-variants/blue-t3-v1.webp",
+      "sha256": "03951a329c86213adbe4dd9cd651ede58d0c0f24d85bc15b1a9e37b773cf6f11"
+    },
+    {
+      "key": "blue-t3-v2",
+      "colour": 1,
+      "tier": 3,
+      "variant": 2,
+      "source": "assets/c5-variants/blue-t3-v2.webp",
+      "sha256": "4a39b4fcc43daa745a0391ce2dfce1cf85ae785a415f96e4bb24a0192e714370"
+    },
+    {
+      "key": "blue-t3-v3",
+      "colour": 1,
+      "tier": 3,
+      "variant": 3,
+      "source": "assets/c5-variants/blue-t3-v3.webp",
+      "sha256": "982cf46756aea57e860ad3e54e842d74cc4381cb59e649fac15cbdca0549ac16"
+    },
+    {
+      "key": "green-t1-v0",
+      "colour": 2,
+      "tier": 1,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        2,
+        0
+      ]
+    },
+    {
+      "key": "green-t1-v1",
+      "colour": 2,
+      "tier": 1,
+      "variant": 1,
+      "source": "assets/c5-variants/green-t1-v1.webp",
+      "sha256": "3c181b1959870cea668d6c619ade0d4caebe2cbac931a10d7f4ec925cc546e9c"
+    },
+    {
+      "key": "green-t1-v2",
+      "colour": 2,
+      "tier": 1,
+      "variant": 2,
+      "source": "assets/c5-variants/green-t1-v2.webp",
+      "sha256": "e4080999d00b752c02c927c98fb959b5fd09352cc2a7668932a743d01cbc0552"
+    },
+    {
+      "key": "green-t1-v3",
+      "colour": 2,
+      "tier": 1,
+      "variant": 3,
+      "source": "assets/c5-variants/green-t1-v3.webp",
+      "sha256": "473ec00d0bf14402f8b9c25d0d3fb839ca10d4395fb9049992eba355afaa1931"
+    },
+    {
+      "key": "green-t1-v4",
+      "colour": 2,
+      "tier": 1,
+      "variant": 4,
+      "source": "assets/c5-variants/green-t1-v4.webp",
+      "sha256": "c9a45100f9e97066d7082fcf52d56d15b5d42d278c3be16bcc6372b9c897ab3d"
+    },
+    {
+      "key": "green-t2-v0",
+      "colour": 2,
+      "tier": 2,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "key": "green-t2-v1",
+      "colour": 2,
+      "tier": 2,
+      "variant": 1,
+      "source": "assets/c5-variants/green-t2-v1.webp",
+      "sha256": "2cb12bfbe1c79bcdfa54d1d543fbc507152983c1e0e0e17d4a4904d94ed6e2fb"
+    },
+    {
+      "key": "green-t2-v2",
+      "colour": 2,
+      "tier": 2,
+      "variant": 2,
+      "source": "assets/c5-variants/green-t2-v2.webp",
+      "sha256": "191ffb28920801d051722be10c6de348d8d456da2d6824bb1d1ce92d07a2706a"
+    },
+    {
+      "key": "green-t2-v3",
+      "colour": 2,
+      "tier": 2,
+      "variant": 3,
+      "source": "assets/c5-variants/green-t2-v3.webp",
+      "sha256": "94a53536221a879a92c41db2f3b077b918fdf9b8aad259ac778f9e272a00f4af"
+    },
+    {
+      "key": "green-t2-v4",
+      "colour": 2,
+      "tier": 2,
+      "variant": 4,
+      "source": "assets/c5-variants/green-t2-v4.webp",
+      "sha256": "370dc4ccfc45f8f5101d4bfab1120872e9fdadf9a58137e1e67387f156e67528"
+    },
+    {
+      "key": "green-t3-v0",
+      "colour": 2,
+      "tier": 3,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        2,
+        2
+      ]
+    },
+    {
+      "key": "green-t3-v1",
+      "colour": 2,
+      "tier": 3,
+      "variant": 1,
+      "source": "assets/c5-variants/green-t3-v1.webp",
+      "sha256": "a521c93b7d013c733079579f7af5ffc99147374363d0b1ff27af2a62aa8926b6"
+    },
+    {
+      "key": "green-t3-v2",
+      "colour": 2,
+      "tier": 3,
+      "variant": 2,
+      "source": "assets/c5-variants/green-t3-v2.webp",
+      "sha256": "231a33081751fc32223462039c8954dcc7955b50e382863bc1a245b14fe77d01"
+    },
+    {
+      "key": "green-t3-v3",
+      "colour": 2,
+      "tier": 3,
+      "variant": 3,
+      "source": "assets/c5-variants/green-t3-v3.webp",
+      "sha256": "657cd23f61be1559068992c26d92f352e48583f590705e6bd98bea4e5222fcda"
+    },
+    {
+      "key": "red-t1-v0",
+      "colour": 3,
+      "tier": 1,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        3,
+        0
+      ]
+    },
+    {
+      "key": "red-t1-v1",
+      "colour": 3,
+      "tier": 1,
+      "variant": 1,
+      "source": "assets/c5-variants/red-t1-v1.webp",
+      "sha256": "1fe9069d7b0437c31385d12c422ee76ff442c80caf6b0fe9566058bb4117fa5e"
+    },
+    {
+      "key": "red-t1-v2",
+      "colour": 3,
+      "tier": 1,
+      "variant": 2,
+      "source": "assets/c5-variants/red-t1-v2.webp",
+      "sha256": "cdb0f3e2f0d85084a38bc8e507aa4b24db661db46f40d7a4ee8100ed4aa9b1c8"
+    },
+    {
+      "key": "red-t1-v3",
+      "colour": 3,
+      "tier": 1,
+      "variant": 3,
+      "source": "assets/c5-variants/red-t1-v3.webp",
+      "sha256": "efccde9fb40ce11e693fbb1d6eaf9754e172f64db1674226a332b7876c6efd6b"
+    },
+    {
+      "key": "red-t1-v4",
+      "colour": 3,
+      "tier": 1,
+      "variant": 4,
+      "source": "assets/c5-variants/red-t1-v4.webp",
+      "sha256": "11aadfd064397097098ad5148beaa87d66a4aae68269158c9207ce445dfda9c6"
+    },
+    {
+      "key": "red-t2-v0",
+      "colour": 3,
+      "tier": 2,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        3,
+        1
+      ]
+    },
+    {
+      "key": "red-t2-v1",
+      "colour": 3,
+      "tier": 2,
+      "variant": 1,
+      "source": "assets/c5-variants/red-t2-v1.webp",
+      "sha256": "a3866c3eff959fda2c556d9a6bd27a1bcdeeb1c0ee92cce09cc84b08867e3883"
+    },
+    {
+      "key": "red-t2-v2",
+      "colour": 3,
+      "tier": 2,
+      "variant": 2,
+      "source": "assets/c5-variants/red-t2-v2.webp",
+      "sha256": "edf25d2b1d2c93be85753098f29193c857f191504c96af41093324359a636981"
+    },
+    {
+      "key": "red-t2-v3",
+      "colour": 3,
+      "tier": 2,
+      "variant": 3,
+      "source": "assets/c5-variants/red-t2-v3.webp",
+      "sha256": "4a92d6e0e217af41a96d48dc2632cccdf6c6cbfa40374f814a2b6d3a78565193"
+    },
+    {
+      "key": "red-t2-v4",
+      "colour": 3,
+      "tier": 2,
+      "variant": 4,
+      "source": "assets/c5-variants/red-t2-v4.webp",
+      "sha256": "cb5d7e5b323dc7f24e27fd828c4d8e3f30b71d8e907cb18336c98ca57f48b4e1"
+    },
+    {
+      "key": "red-t3-v0",
+      "colour": 3,
+      "tier": 3,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        3,
+        2
+      ]
+    },
+    {
+      "key": "red-t3-v1",
+      "colour": 3,
+      "tier": 3,
+      "variant": 1,
+      "source": "assets/c5-variants/red-t3-v1.webp",
+      "sha256": "f6b672fa0c6bfa88357e2997ee44eb41717a98f9d9a7a8be6a94b4db2f7eddc6"
+    },
+    {
+      "key": "red-t3-v2",
+      "colour": 3,
+      "tier": 3,
+      "variant": 2,
+      "source": "assets/c5-variants/red-t3-v2.webp",
+      "sha256": "716ed38c5a4a6088c45df3f0e199e9bc9176bcb1c62119a148b195da69593418"
+    },
+    {
+      "key": "red-t3-v3",
+      "colour": 3,
+      "tier": 3,
+      "variant": 3,
+      "source": "assets/c5-variants/red-t3-v3.webp",
+      "sha256": "7b68131b5b4ce8085f0f2d4f548dc77dff2285c21ccc5452bd6a8248efb642dc"
+    },
+    {
+      "key": "black-t1-v0",
+      "colour": 4,
+      "tier": 1,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        4,
+        0
+      ]
+    },
+    {
+      "key": "black-t1-v1",
+      "colour": 4,
+      "tier": 1,
+      "variant": 1,
+      "source": "assets/c5-variants/black-t1-v1.webp",
+      "sha256": "ea5790c0cb8778411b255940b0a23a21a7b58b26222fc8503a49be6c7cf982da"
+    },
+    {
+      "key": "black-t1-v2",
+      "colour": 4,
+      "tier": 1,
+      "variant": 2,
+      "source": "assets/c5-variants/black-t1-v2.webp",
+      "sha256": "ee428405345254ab4da26e7d59e82f490ae4374999a2d5be8f15dec70fb522fc"
+    },
+    {
+      "key": "black-t1-v3",
+      "colour": 4,
+      "tier": 1,
+      "variant": 3,
+      "source": "assets/c5-variants/black-t1-v3.webp",
+      "sha256": "ab4e94a856ad192d49823f617a40f1c5a5ee68ed2a96b2a0341b8278868da926"
+    },
+    {
+      "key": "black-t1-v4",
+      "colour": 4,
+      "tier": 1,
+      "variant": 4,
+      "source": "assets/c5-variants/black-t1-v4.webp",
+      "sha256": "ed7d82ec70cc5f8ab6c5daa912eccaf5ea584791426c46f9ce9d8b776016084f"
+    },
+    {
+      "key": "black-t2-v0",
+      "colour": 4,
+      "tier": 2,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        4,
+        1
+      ]
+    },
+    {
+      "key": "black-t2-v1",
+      "colour": 4,
+      "tier": 2,
+      "variant": 1,
+      "source": "assets/c5-variants/black-t2-v1.webp",
+      "sha256": "df5a051f5b305e434e4018884c1d963cabb538078aa73c262dfc03a5b811729d"
+    },
+    {
+      "key": "black-t2-v2",
+      "colour": 4,
+      "tier": 2,
+      "variant": 2,
+      "source": "assets/c5-variants/black-t2-v2.webp",
+      "sha256": "72910a4fa408f82aa7200b93719ce091ecbdd8b5be64d8069abde8ec290426a9"
+    },
+    {
+      "key": "black-t2-v3",
+      "colour": 4,
+      "tier": 2,
+      "variant": 3,
+      "source": "assets/c5-variants/black-t2-v3.webp",
+      "sha256": "ae92a6b401750cbe9acfef4f7252550d055f3d6981f4d5033b869421dfbc21e6"
+    },
+    {
+      "key": "black-t2-v4",
+      "colour": 4,
+      "tier": 2,
+      "variant": 4,
+      "source": "assets/c5-variants/black-t2-v4.webp",
+      "sha256": "d5a75d6a5c2be16887d9aefe3c55399cc38de35206704886447f7b24a5c21425"
+    },
+    {
+      "key": "black-t3-v0",
+      "colour": 4,
+      "tier": 3,
+      "variant": 0,
+      "source": "assets/c5-landscapes.webp",
+      "sha256": "f2ff84941fdfb50b441e102377791979fbf0223fc830c81e70a5090bc7a61aef",
+      "atlas_cell": [
+        4,
+        2
+      ]
+    },
+    {
+      "key": "black-t3-v1",
+      "colour": 4,
+      "tier": 3,
+      "variant": 1,
+      "source": "assets/c5-variants/black-t3-v1.webp",
+      "sha256": "39166f425abacef439953f83e95f4302581bf6ed4427c4281d6f978e75c58afa"
+    },
+    {
+      "key": "black-t3-v2",
+      "colour": 4,
+      "tier": 3,
+      "variant": 2,
+      "source": "assets/c5-variants/black-t3-v2.webp",
+      "sha256": "f7a6ed569eb2de264a59d683113045c48b73c838bb7c7ff8831b4dd1cf582ac6"
+    },
+    {
+      "key": "black-t3-v3",
+      "colour": 4,
+      "tier": 3,
+      "variant": 3,
+      "source": "assets/c5-variants/black-t3-v3.webp",
+      "sha256": "a0df61acfbee043f2d45209f7424715afdc7543e689a95dd84fff718bdedbfb2"
+    }
+  ],
+  "missing": []
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f1e8">
+<title>璀璨宝石</title>
+<style>/*__THEME_CSS__*/</style>
+</head>
+<body>
+<header class="app-header">
+  <div class="brand"><span class="brand-mark" aria-hidden="true">◇</span><div class="wordmark">璀璨宝石</div></div>
+  <div class="header-actions"><span id="round"></span><span id="turn-clock" class="turn-clock" role="timer" hidden></span><button id="tutorial-btn" class="quiet">玩法引导</button><button id="settings-btn" class="quiet">设置</button><button id="new-game-btn" class="quiet">新对局</button></div>
+</header>
+<main>
+  <div id="status" role="status" aria-live="polite"></div>
+  <div id="tutorial"></div>
+  <div id="banner" aria-live="polite"></div>
+  <section class="board" aria-label="双人牌桌">
+    <div id="players" class="players-stack"></div>
+    <div class="market">
+    <section class="noble-row"><div class="section-caption"><h2>贵族</h2><span>永久折扣要求</span></div><div class="nobles" id="nobles"></div></section>
+    <section id="tiers" aria-label="三层公开发展牌"></section>
+    </div>
+  </section>
+  <aside class="side">
+    <section class="bank-panel"><h2>筹码池</h2><div class="piles" id="bank"></div></section>
+    <section class="action-panel panel"><div class="panel-heading"><h2>你的行动</h2><span id="turn-label"></span></div>
+      <div class="action-tabs" role="tablist" aria-label="行动方式"><button data-mode="take" role="tab">取筹码</button><button data-mode="buy" role="tab">购买</button><button data-mode="reserve" role="tab">预留</button></div>
+      <div id="action-content"></div><div class="selbar" id="selbar"></div><div id="pass-wrap"></div>
+    </section>
+    <section class="panel log-panel"><div class="panel-heading"><h2>行动记录</h2><span class="subtle">最近行动</span></div><ol id="log"></ol><p class="log-empty" id="log-empty">从第一枚筹码开始。</p></section>
+    <p class="board-note">15 分触发最后一轮 · 持有筹码上限 10 枚</p>
+  </aside>
+</main>
+<footer class="product-credit">Built with Codex · VibeCoding</footer>
+<section id="owned-cards-panel" class="owned-cards-panel" role="dialog" aria-labelledby="owned-cards-title" aria-describedby="owned-score" hidden>
+  <div id="owned-cards-heading" class="owned-cards-heading" tabindex="0" aria-label="拖动标题栏移动已购卡牌，也可使用方向键" title="拖动标题栏移动"><div><h2 id="owned-cards-title">已购卡牌 <span id="owned-panel-count"></span></h2><p id="owned-score" class="owned-score"></p></div><button id="owned-cards-close" class="icon-button" type="button" aria-label="关闭已购卡牌">×</button></div>
+  <div id="owned-card-grid" class="owned-card-grid" role="list" aria-label="按购入顺序排列的已购卡牌" tabindex="0"></div>
+  <p id="owned-cards-empty" class="owned-cards-empty">还没有购入卡牌。</p>
+</section>
+<div id="popover"></div><div id="fly"></div>
+<div id="noble-notices" role="status" aria-live="polite" aria-relevant="additions"></div>
+<div id="companion" class="companion">
+  <svg class="companion-hit-defs" width="0" height="0" aria-hidden="true"><defs><clipPath id="companion-hit-clip" clipPathUnits="objectBoundingBox"><path id="companion-hit-path"/></clipPath></defs></svg>
+  <button id="companion-collapse" class="companion-collapse" type="button" aria-label="收起角色">−</button>
+  <button id="companion-toggle" class="companion-toggle" type="button" aria-expanded="false" aria-controls="companion-panel" aria-describedby="companion-help"><img id="companion-image" alt="" draggable="false"><span>提示</span></button>
+</div>
+<span id="companion-help" class="sr-only">点击角色打开提示。角色和收起后的展开按钮都可以拖动；聚焦后用方向键移动，Home 返回角落。</span>
+<section id="companion-panel" class="companion-panel" aria-label="角色提示面板" hidden>
+  <div class="companion-heading"><div><span class="eyebrow">牌桌伙伴</span><h2 id="companion-name"></h2></div><button id="companion-panel-close" class="icon-button" type="button" aria-label="关闭提示面板">×</button></div>
+  <p id="companion-context" class="hint-note"></p>
+  <div class="hint-actions"><button id="hint-get" class="primary" type="button">提示</button></div>
+  <div id="hint-result" role="status" aria-live="polite">点击“提示”查看当前局面的建议。</div>
+  <p class="hint-provenance">提示模型：原版 Transformer · 200M（seed422）</p>
+</section>
+<dialog id="settings-dialog" aria-labelledby="settings-title">
+  <form id="settings-form">
+    <div class="dialog-heading"><div><span class="eyebrow">新对局设置</span><h2 id="settings-title">按你的节奏开始</h2></div><button type="button" id="settings-close" class="icon-button" aria-label="关闭设置">×</button></div>
+    <fieldset class="companion-settings"><legend>牌桌伙伴</legend><div id="companion-styles" class="companion-styles" role="group" aria-label="选择角色风格"></div><div id="companion-choices" class="companion-choices" role="group" aria-label="选择角色"></div><div class="companion-size-settings"><div class="companion-size-controls"><div class="companion-size-heading"><label for="companion-size">伙伴大小 <output id="companion-size-value" for="companion-size">100%</output></label><button id="companion-size-default" type="button" class="quiet">恢复默认</button></div><input id="companion-size" type="range" min="60" max="200" step="10" value="100"><div class="range-labels"><span>60%</span><span>200%</span></div></div><div class="companion-size-swatch" aria-label="伙伴大小预览"><img id="companion-size-preview" alt=""></div></div><div class="companion-settings-footer"><button type="button" id="companion-reset" class="quiet">找回角色</button></div></fieldset>
+    <label class="field-label" for="opponent-select">对手</label>
+    <select id="opponent-select"><option value="simple">简单机器人</option><option value="transformer100m">AI模型简单</option><option value="transformer200m">AI模型中等</option></select>
+    <p class="field-note" id="opponent-note"></p>
+    <span class="field-label">先后手</span>
+    <div class="seat-options"><label><input type="radio" name="seat" value="0" checked> 我先手</label><label><input type="radio" name="seat" value="1"> 对手先手</label></div>
+    <fieldset class="time-limit-settings">
+      <label class="time-limit-toggle"><input type="checkbox" id="turn-limit-enabled">回合限时 <output id="turn-limit-value" for="turn-limit-range">1 分钟</output></label>
+      <label class="sr-only" for="turn-limit-range">每回合限时</label>
+      <input id="turn-limit-range" type="range" min="5" max="1800" step="5" value="60" disabled>
+      <div class="range-labels"><span>5 秒</span><span>30 分钟</span></div>
+      <p class="time-limit-note">仅限制你的回合；不足 1 分钟时显示倒计时。超时自动结束回合，已开始的付款、归还筹码等步骤会自动完成。</p>
+    </fieldset>
+    <p class="field-note">对手、先后手与限时在新对局生效。开始后，当前对局将被替换。</p>
+    <p id="settings-error" class="inline-error" role="alert"></p>
+    <div class="dialog-actions"><button type="button" id="settings-cancel" class="secondary">继续当前对局</button><button type="submit" class="primary">开始新对局</button></div>
+  </form>
+</dialog>
+<script>/*__GLUE__*/</script>
+<script>/*__POLICY_JS__*/</script>
+<script>/*__UI_JS__*/</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+target/
+node_modules/
+dist/
+output/
+play/index.html
+play/artifact.html
+local-game/web/
+local-models/**/weights/*.pt
+*.zip
+.env
+.env.*
+!.env.example
+*.log

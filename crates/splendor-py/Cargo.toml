@@ -1,0 +1,17 @@
+[package]
+name = "splendor-py"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+description = "Python bindings for splendor-core: vectorized RL environment and imitation-data generation."
+
+[lib]
+name = "splendor_py"
+crate-type = ["cdylib"]
+
+[dependencies]
+splendor-core = { path = "../splendor-core" }
+pyo3 = { version = "0.23", features = ["extension-module", "abi3-py39"] }
+numpy = "0.23"
+ndarray = "0.16"
+serde_json = { workspace = true }

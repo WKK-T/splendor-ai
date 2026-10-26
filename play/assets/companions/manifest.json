@@ -1,0 +1,82 @@
+[
+  {
+    "id": "jade",
+    "name": "碧玉",
+    "file": "jade-pet.svg",
+    "alpha": true,
+    "styles": {
+      "pet": {
+        "file": "jade-pet.svg",
+        "alpha": true
+      },
+      "classic": {
+        "file": "jade-classic.svg",
+        "alpha": true
+      }
+    }
+  },
+  {
+    "id": "ruby",
+    "name": "红晶",
+    "file": "ruby-pet.svg",
+    "alpha": true,
+    "styles": {
+      "pet": {
+        "file": "ruby-pet.svg",
+        "alpha": true
+      },
+      "classic": {
+        "file": "ruby-classic.svg",
+        "alpha": true
+      }
+    }
+  },
+  {
+    "id": "amber",
+    "name": "琥珀",
+    "file": "amber-pet.svg",
+    "alpha": true,
+    "styles": {
+      "pet": {
+        "file": "amber-pet.svg",
+        "alpha": true
+      },
+      "classic": {
+        "file": "amber-classic.svg",
+        "alpha": true
+      }
+    }
+  },
+  {
+    "id": "sapphire",
+    "name": "蓝晶",
+    "file": "sapphire-pet.svg",
+    "alpha": true,
+    "styles": {
+      "pet": {
+        "file": "sapphire-pet.svg",
+        "alpha": true
+      },
+      "classic": {
+        "file": "sapphire-classic.svg",
+        "alpha": true
+      }
+    }
+  },
+  {
+    "id": "violet",
+    "name": "紫晶",
+    "file": "violet-pet.svg",
+    "alpha": true,
+    "styles": {
+      "pet": {
+        "file": "violet-pet.svg",
+        "alpha": true
+      },
+      "classic": {
+        "file": "violet-classic.svg",
+        "alpha": true
+      }
+    }
+  }
+]

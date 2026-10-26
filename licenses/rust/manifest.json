@@ -1,0 +1,1338 @@
+{
+  "scope": "Union of registry packages in the three Cargo.lock files, including build-time and target-conditional dependencies. Individual binaries compile subsets of this list.",
+  "packages": [
+    {
+      "name": "autocfg",
+      "version": "1.5.1",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/cuviper/autocfg",
+      "crate_url": "https://crates.io/crates/autocfg/1.5.1",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "f2032f911046de80f0a198e0901378627c33f59ea0ac00e363d481118bd70a53",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "autocfg-1.5.1/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "autocfg-1.5.1/LICENSE-MIT",
+          "sha256": "27995d58ad5c1145c1a8cd86244ce844886958a35eb2b78c6b772748669999ac"
+        }
+      ]
+    },
+    {
+      "name": "bumpalo",
+      "version": "3.20.3",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/fitzgen/bumpalo",
+      "crate_url": "https://crates.io/crates/bumpalo/3.20.3",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "72f5acc6cb2ba439de613abc23857ec3d78374d8ed5ac84e9d11336e87da8649",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "bumpalo-3.20.3/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "bumpalo-3.20.3/LICENSE-MIT",
+          "sha256": "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee"
+        }
+      ]
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/cfg-if",
+      "crate_url": "https://crates.io/crates/cfg-if/1.0.5",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "cfg-if-1.0.5/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "cfg-if-1.0.5/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "getrandom",
+      "version": "0.3.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-random/getrandom",
+      "crate_url": "https://crates.io/crates/getrandom/0.3.4",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "899def5c37c4fd7b2664648c28120ecec138e4d395b459e5ca34f9cce2dd77fd",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "getrandom-0.3.4/LICENSE-APACHE",
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+        },
+        {
+          "path": "getrandom-0.3.4/LICENSE-MIT",
+          "sha256": "29e9fe5074bd27e0e5d5d110394fbbcd841baee2651a3c4b4560a632702cede4"
+        }
+      ]
+    },
+    {
+      "name": "heck",
+      "version": "0.5.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/withoutboats/heck",
+      "crate_url": "https://crates.io/crates/heck/0.5.0",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "heck-0.5.0/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "heck-0.5.0/LICENSE-MIT",
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        }
+      ]
+    },
+    {
+      "name": "indoc",
+      "version": "2.0.8",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/indoc",
+      "crate_url": "https://crates.io/crates/indoc/2.0.8",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "a37b2691796cffeb8a8cd305ac66e65841559f147f4e63231d0eafa4db5384d1",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "indoc-2.0.8/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "indoc-2.0.8/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/itoa",
+      "crate_url": "https://crates.io/crates/itoa/1.0.18",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "itoa-1.0.18/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "itoa-1.0.18/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "libc",
+      "version": "0.2.190",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/libc",
+      "crate_url": "https://crates.io/crates/libc/0.2.190",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "ce5d3ddc6d3fa000eb1536d85e147bfe31aacaba692ed6a876f95cb7c855be78",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "libc-0.2.190/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "libc-0.2.190/LICENSE-MIT",
+          "sha256": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e"
+        }
+      ]
+    },
+    {
+      "name": "libc",
+      "version": "0.2.191",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/libc",
+      "crate_url": "https://crates.io/crates/libc/0.2.191",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "65cd87c9a6d60536580b316ad985726104730a5151c99845f2490428ef91240a",
+      "lockfiles": [
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "libc-0.2.191/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "libc-0.2.191/LICENSE-MIT",
+          "sha256": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e"
+        }
+      ]
+    },
+    {
+      "name": "log",
+      "version": "0.4.34",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-lang/log",
+      "crate_url": "https://crates.io/crates/log/0.4.34",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "log-0.4.34/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "log-0.4.34/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "name": "matrixmultiply",
+      "version": "0.3.11",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/bluss/matrixmultiply/",
+      "crate_url": "https://crates.io/crates/matrixmultiply/0.3.11",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "3f607c237553f086e7043417a51df26b2eb899d3caff94e6a67592ff992fedc7",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "matrixmultiply-0.3.11/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "matrixmultiply-0.3.11/LICENSE-MIT",
+          "sha256": "792d075c7bad6dac258a44e799eb64cbf465e24d9932d27669be08c5ec957e27"
+        }
+      ]
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3",
+      "license": "Unlicense OR MIT",
+      "repository": "https://github.com/BurntSushi/memchr",
+      "crate_url": "https://crates.io/crates/memchr/2.8.3",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "memchr-2.8.3/COPYING",
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "path": "memchr-2.8.3/LICENSE-MIT",
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        }
+      ]
+    },
+    {
+      "name": "memoffset",
+      "version": "0.9.1",
+      "license": "MIT",
+      "repository": "https://github.com/Gilnaa/memoffset",
+      "crate_url": "https://crates.io/crates/memoffset/0.9.1",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "488016bfae457b036d996092f6cb448677611ce4449e970ceaf42695203f218a",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "memoffset-0.9.1/LICENSE",
+          "sha256": "3234ac55816264ee7b6c7ee27efd61cf0a1fe775806870e3d9b4c41ea73c5cb1"
+        }
+      ]
+    },
+    {
+      "name": "ndarray",
+      "version": "0.16.1",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-ndarray/ndarray",
+      "crate_url": "https://crates.io/crates/ndarray/0.16.1",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "882ed72dce9365842bf196bdeedf5055305f11fc8c03dee7bb0194a6cad34841",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "ndarray-0.16.1/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "ndarray-0.16.1/LICENSE-MIT",
+          "sha256": "1fd6747d2c8e80f9fa766f57c5888864774621deb85cc2838ccaed727db32d45"
+        }
+      ]
+    },
+    {
+      "name": "num-complex",
+      "version": "0.4.6",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-num/num-complex",
+      "crate_url": "https://crates.io/crates/num-complex/0.4.6",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "73f88a1307638156682bada9d7604135552957b7818057dcef22705b4d509495",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "num-complex-0.4.6/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "num-complex-0.4.6/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "name": "num-integer",
+      "version": "0.1.47",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-num/num-integer",
+      "crate_url": "https://crates.io/crates/num-integer/0.1.47",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "7ce2d95d4b3734dc35aa2f45e1aa22cd416814592a4f9d9205e11affd5b8e10b",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "num-integer-0.1.47/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "num-integer-0.1.47/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "name": "num-traits",
+      "version": "0.2.19",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-num/num-traits",
+      "crate_url": "https://crates.io/crates/num-traits/0.2.19",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "num-traits-0.2.19/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "num-traits-0.2.19/LICENSE-MIT",
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "name": "numpy",
+      "version": "0.23.0",
+      "license": "BSD-2-Clause",
+      "repository": "https://github.com/PyO3/rust-numpy",
+      "crate_url": "https://crates.io/crates/numpy/0.23.0",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "b94caae805f998a07d33af06e6a3891e38556051b8045c615470a71590e13e78",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "numpy-0.23.0/LICENSE",
+          "sha256": "57088c28c5ea50e729a06c3b04de70c41e496a5b753d75a744e2abbf60a2448f"
+        }
+      ]
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/matklad/once_cell",
+      "crate_url": "https://crates.io/crates/once_cell/1.21.4",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "once_cell-1.21.4/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "once_cell-1.21.4/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "portable-atomic",
+      "version": "1.15.0",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/taiki-e/portable-atomic",
+      "crate_url": "https://crates.io/crates/portable-atomic/1.15.0",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "05c8b63e8d9609db387f0324918f81d68fe27748f084ef092fb35954d0539a85",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "portable-atomic-1.15.0/LICENSE-APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "portable-atomic-1.15.0/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "portable-atomic-util",
+      "version": "0.2.8",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/taiki-e/portable-atomic-util",
+      "crate_url": "https://crates.io/crates/portable-atomic-util/0.2.8",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "10ab3eb7f3becc3a1cbc4f2c6f20267996cfc1a6467a873763411b136a122715",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "portable-atomic-util-0.2.8/LICENSE-APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "portable-atomic-util-0.2.8/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "ppv-lite86",
+      "version": "0.2.21",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/cryptocorrosion/cryptocorrosion",
+      "crate_url": "https://crates.io/crates/ppv-lite86/0.2.21",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "85eae3c4ed2f50dcfe72643da4befc30deadb458a9b590d720cde2f2b1e97da9",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "ppv-lite86-0.2.21/LICENSE-APACHE",
+          "sha256": "0218327e7a480793ffdd4eb792379a9709e5c135c7ba267f709d6f6d4d70af0a"
+        },
+        {
+          "path": "ppv-lite86-0.2.21/LICENSE-MIT",
+          "sha256": "4cada0bd02ea3692eee6f16400d86c6508bbd3bafb2b65fed0419f36d4f83e8f"
+        }
+      ]
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/proc-macro2",
+      "crate_url": "https://crates.io/crates/proc-macro2/1.0.107",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "proc-macro2-1.0.107/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "proc-macro2-1.0.107/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "pyo3",
+      "version": "0.23.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/pyo3/pyo3",
+      "crate_url": "https://crates.io/crates/pyo3/0.23.5",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "7778bffd85cf38175ac1f545509665d0b9b92a198ca7941f131f85f7a4f9a872",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "pyo3-0.23.5/LICENSE-APACHE",
+          "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9"
+        },
+        {
+          "path": "pyo3-0.23.5/LICENSE-MIT",
+          "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6"
+        }
+      ]
+    },
+    {
+      "name": "pyo3-build-config",
+      "version": "0.23.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/pyo3/pyo3",
+      "crate_url": "https://crates.io/crates/pyo3-build-config/0.23.5",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "94f6cbe86ef3bf18998d9df6e0f3fc1050a8c5efa409bf712e661a4366e010fb",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "pyo3-build-config-0.23.5/LICENSE-APACHE",
+          "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9"
+        },
+        {
+          "path": "pyo3-build-config-0.23.5/LICENSE-MIT",
+          "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6"
+        }
+      ]
+    },
+    {
+      "name": "pyo3-ffi",
+      "version": "0.23.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/pyo3/pyo3",
+      "crate_url": "https://crates.io/crates/pyo3-ffi/0.23.5",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "e9f1b4c431c0bb1c8fb0a338709859eed0d030ff6daa34368d3b152a63dfdd8d",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "pyo3-ffi-0.23.5/LICENSE-APACHE",
+          "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9"
+        },
+        {
+          "path": "pyo3-ffi-0.23.5/LICENSE-MIT",
+          "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6"
+        }
+      ]
+    },
+    {
+      "name": "pyo3-macros",
+      "version": "0.23.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/pyo3/pyo3",
+      "crate_url": "https://crates.io/crates/pyo3-macros/0.23.5",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "fbc2201328f63c4710f68abdf653c89d8dbc2858b88c5d88b0ff38a75288a9da",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "pyo3-macros-0.23.5/LICENSE-APACHE",
+          "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9"
+        },
+        {
+          "path": "pyo3-macros-0.23.5/LICENSE-MIT",
+          "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6"
+        }
+      ]
+    },
+    {
+      "name": "pyo3-macros-backend",
+      "version": "0.23.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/pyo3/pyo3",
+      "crate_url": "https://crates.io/crates/pyo3-macros-backend/0.23.5",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "fca6726ad0f3da9c9de093d6f116a93c1a38e417ed73bf138472cf4064f72028",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "pyo3-macros-backend-0.23.5/LICENSE-APACHE",
+          "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9"
+        },
+        {
+          "path": "pyo3-macros-backend-0.23.5/LICENSE-MIT",
+          "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6"
+        }
+      ]
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/quote",
+      "crate_url": "https://crates.io/crates/quote/1.0.47",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "quote-1.0.47/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "quote-1.0.47/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "r-efi",
+      "version": "5.3.0",
+      "license": "MIT OR Apache-2.0 OR LGPL-2.1-or-later",
+      "repository": "https://github.com/r-efi/r-efi",
+      "crate_url": "https://crates.io/crates/r-efi/5.3.0",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "69cdb34c158ceb288df11e18b4bd39de994f6657d83847bdffdbd7f346754b0f",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "r-efi-5.3.0/AUTHORS",
+          "sha256": "ff92bed461f50338dd703a9ba9aee496a425957873df1d91192776e4bdf5dda7"
+        }
+      ]
+    },
+    {
+      "name": "rand",
+      "version": "0.9.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-random/rand",
+      "crate_url": "https://crates.io/crates/rand/0.9.5",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "b9ef1d0d795eb7d84685bca4f72f3649f064e6641543d3a8c415898726a57b41",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "rand-0.9.5/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5"
+        },
+        {
+          "path": "rand-0.9.5/LICENSE-APACHE",
+          "sha256": "35242e7a83f69875e6edeff02291e688c97caafe2f8902e4e19b49d3e78b4cab"
+        },
+        {
+          "path": "rand-0.9.5/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b"
+        }
+      ]
+    },
+    {
+      "name": "rand_chacha",
+      "version": "0.9.0",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-random/rand",
+      "crate_url": "https://crates.io/crates/rand_chacha/0.9.0",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "d3022b5f1df60f26e1ffddd6c66e8aa15de382ae63b3a0c1bfc0e4d3e3f325cb",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "rand_chacha-0.9.0/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5"
+        },
+        {
+          "path": "rand_chacha-0.9.0/LICENSE-APACHE",
+          "sha256": "35242e7a83f69875e6edeff02291e688c97caafe2f8902e4e19b49d3e78b4cab"
+        },
+        {
+          "path": "rand_chacha-0.9.0/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b"
+        }
+      ]
+    },
+    {
+      "name": "rand_core",
+      "version": "0.9.5",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rust-random/rand",
+      "crate_url": "https://crates.io/crates/rand_core/0.9.5",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "76afc826de14238e6e8c374ddcc1fa19e374fd8dd986b0d2af0d02377261d83c",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "rand_core-0.9.5/COPYRIGHT",
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5"
+        },
+        {
+          "path": "rand_core-0.9.5/LICENSE-APACHE",
+          "sha256": "6df43f6f4b5d4587f3d8d71e45532c688fd168afa5fe89d571cb32fa09c4ef51"
+        },
+        {
+          "path": "rand_core-0.9.5/LICENSE-MIT",
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b"
+        }
+      ]
+    },
+    {
+      "name": "rawpointer",
+      "version": "0.2.1",
+      "license": "MIT/Apache-2.0",
+      "repository": "https://github.com/bluss/rawpointer/",
+      "crate_url": "https://crates.io/crates/rawpointer/0.2.1",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "60a357793950651c4ed0f3f52338f53b2f809f32d83a07f72909fa13e4c6c1e3",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "rawpointer-0.2.1/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "rawpointer-0.2.1/LICENSE-MIT",
+          "sha256": "7576269ea71f767b99297934c0b2367532690f8c4badc695edf8e04ab6a1e545"
+        }
+      ]
+    },
+    {
+      "name": "rustc-hash",
+      "version": "2.1.3",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "https://github.com/rust-lang/rustc-hash",
+      "crate_url": "https://crates.io/crates/rustc-hash/2.1.3",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "6b1e7f9a428571be2dc5bc0505c13fb6bf936822b894ec87abf8a08a4e51742d",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "rustc-hash-2.1.3/LICENSE-APACHE",
+          "sha256": "95bd3988beee069fa2848f648dab43cc6e0b2add2ad6bcb17360caf749802bcc"
+        },
+        {
+          "path": "rustc-hash-2.1.3/LICENSE-MIT",
+          "sha256": "30fefc3a7d6a0041541858293bcbea2dde4caa4c0a5802f996a7f7e8c0085652"
+        }
+      ]
+    },
+    {
+      "name": "rustversion",
+      "version": "1.0.23",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/rustversion",
+      "crate_url": "https://crates.io/crates/rustversion/1.0.23",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "cf54715a573b99ac80df0bc206da022bcd442c974952c7b9720069370852e21f",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "rustversion-1.0.23/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "rustversion-1.0.23/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde",
+      "crate_url": "https://crates.io/crates/serde/1.0.229",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "serde-1.0.229/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "serde-1.0.229/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde",
+      "crate_url": "https://crates.io/crates/serde_core/1.0.229",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "serde_core-1.0.229/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "serde_core-1.0.229/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/serde",
+      "crate_url": "https://crates.io/crates/serde_derive/1.0.229",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "serde_derive-1.0.229/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "serde_derive-1.0.229/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.154",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/serde-rs/json",
+      "crate_url": "https://crates.io/crates/serde_json/1.0.154",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "e7e9cc8b1b85264074fbcc02a88680c4096b1e47df8f739dceb03bf482f04bd6",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "serde_json-1.0.154/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "serde_json-1.0.154/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "syn",
+      "version": "2.0.119",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/syn",
+      "crate_url": "https://crates.io/crates/syn/2.0.119",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "syn-2.0.119/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "syn-2.0.119/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "syn",
+      "version": "3.0.9",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/syn",
+      "crate_url": "https://crates.io/crates/syn/3.0.9",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "d78c8dee4c7bf0e14673097256fed6142ce9d3b85a408189d07482442145823b",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "syn-3.0.9/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "syn-3.0.9/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "target-lexicon",
+      "version": "0.12.16",
+      "license": "Apache-2.0 WITH LLVM-exception",
+      "repository": "https://github.com/bytecodealliance/target-lexicon",
+      "crate_url": "https://crates.io/crates/target-lexicon/0.12.16",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "61c41af27dd6d1e27b1b16b489db798443478cef1f06a660c96db617ba5de3b1",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "target-lexicon-0.12.16/LICENSE",
+          "sha256": "268872b9816f90fd8e85db5a28d33f8150ebb8dd016653fb39ef1f94f2686bc5"
+        }
+      ]
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.27",
+      "license": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "repository": "https://github.com/dtolnay/unicode-ident",
+      "crate_url": "https://crates.io/crates/unicode-ident/1.0.27",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "a2c754d6c33795a1c324727428e5a7dedb5b06195f9890bdbcba760d3e246563",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "unicode-ident-1.0.27/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "unicode-ident-1.0.27/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        {
+          "path": "unicode-ident-1.0.27/LICENSE-UNICODE",
+          "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+        }
+      ]
+    },
+    {
+      "name": "unindent",
+      "version": "0.2.4",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/dtolnay/indoc",
+      "crate_url": "https://crates.io/crates/unindent/0.2.4",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "7264e107f553ccae879d21fbea1d6724ac785e8c3bfc762137959b5802826ef3",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "unindent-0.2.4/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "unindent-0.2.4/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "wasip2",
+      "version": "1.0.4+wasi-0.2.12",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/bytecodealliance/wasi-rs",
+      "crate_url": "https://crates.io/crates/wasip2/1.0.4+wasi-0.2.12",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "b67efb37e106e55ce722a510d6b5f9c17f083e5fc79afc2badeb12cc313d9487",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "wasip2-1.0.4+wasi-0.2.12/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "wasip2-1.0.4+wasi-0.2.12/LICENSE-Apache-2.0_WITH_LLVM-exception",
+          "sha256": "268872b9816f90fd8e85db5a28d33f8150ebb8dd016653fb39ef1f94f2686bc5"
+        },
+        {
+          "path": "wasip2-1.0.4+wasi-0.2.12/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "wasm-bindgen",
+      "version": "0.2.100",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rustwasm/wasm-bindgen",
+      "crate_url": "https://crates.io/crates/wasm-bindgen/0.2.100",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "1edc8929d7499fc4e8f0be2262a241556cfc54a0bea223790e71446f2aab1ef5",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "wasm-bindgen-0.2.100/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "wasm-bindgen-0.2.100/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "wasm-bindgen-backend",
+      "version": "0.2.100",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/backend",
+      "crate_url": "https://crates.io/crates/wasm-bindgen-backend/0.2.100",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "2f0a0651a5c2bc21487bde11ee802ccaf4c51935d0d3d42a6101f98161700bc6",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "wasm-bindgen-backend-0.2.100/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "wasm-bindgen-backend-0.2.100/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.100",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/macro",
+      "crate_url": "https://crates.io/crates/wasm-bindgen-macro/0.2.100",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "7fe63fc6d09ed3792bd0897b314f53de8e16568c2b3f7982f468c0bf9bd0b407",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "wasm-bindgen-macro-0.2.100/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "wasm-bindgen-macro-0.2.100/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.100",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/macro-support",
+      "crate_url": "https://crates.io/crates/wasm-bindgen-macro-support/0.2.100",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "8ae87ea40c9f689fc23f209965b6fb8a99ad69aeeb0231408be24920604395de",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "wasm-bindgen-macro-support-0.2.100/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "wasm-bindgen-macro-support-0.2.100/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.100",
+      "license": "MIT OR Apache-2.0",
+      "repository": "https://github.com/rustwasm/wasm-bindgen/tree/master/crates/shared",
+      "crate_url": "https://crates.io/crates/wasm-bindgen-shared/0.2.100",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "1a05d73b933a847d6cccdda8f838a22ff101ad9bf93e33684f39c1f5f0eece3d",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "wasm-bindgen-shared-0.2.100/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "wasm-bindgen-shared-0.2.100/LICENSE-MIT",
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "wit-bindgen",
+      "version": "0.57.1",
+      "license": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/bytecodealliance/wit-bindgen",
+      "crate_url": "https://crates.io/crates/wit-bindgen/0.57.1",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "1ebf944e87a7c253233ad6766e082e3cd714b5d03812acc24c318f549614536e",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "wit-bindgen-0.57.1/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "path": "wit-bindgen-0.57.1/LICENSE-Apache-2.0_WITH_LLVM-exception",
+          "sha256": "268872b9816f90fd8e85db5a28d33f8150ebb8dd016653fb39ef1f94f2686bc5"
+        },
+        {
+          "path": "wit-bindgen-0.57.1/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "zerocopy",
+      "version": "0.8.62",
+      "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/google/zerocopy",
+      "crate_url": "https://crates.io/crates/zerocopy/0.8.62",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "86502bf56ac7c77571a32e2647bb2a15894565e981fb2a48d7bde2d91c965a9d",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "zerocopy-0.8.62/LICENSE-APACHE",
+          "sha256": "9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3"
+        },
+        {
+          "path": "zerocopy-0.8.62/LICENSE-BSD",
+          "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32"
+        },
+        {
+          "path": "zerocopy-0.8.62/LICENSE-MIT",
+          "sha256": "1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df"
+        }
+      ]
+    },
+    {
+      "name": "zerocopy",
+      "version": "0.8.63",
+      "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/google/zerocopy",
+      "crate_url": "https://crates.io/crates/zerocopy/0.8.63",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "e5fe1f8f1b06191a00962174c61aa5005e0bb391a6d80d07e24d115c01a92ed8",
+      "lockfiles": [
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "zerocopy-0.8.63/LICENSE-APACHE",
+          "sha256": "9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3"
+        },
+        {
+          "path": "zerocopy-0.8.63/LICENSE-BSD",
+          "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32"
+        },
+        {
+          "path": "zerocopy-0.8.63/LICENSE-MIT",
+          "sha256": "1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df"
+        }
+      ]
+    },
+    {
+      "name": "zerocopy-derive",
+      "version": "0.8.62",
+      "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/google/zerocopy",
+      "crate_url": "https://crates.io/crates/zerocopy-derive/0.8.62",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "5457206954b06561e2608c7e19cf58b1926586d999c246eebe4502f7e2039d1a",
+      "lockfiles": [
+        "Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "zerocopy-derive-0.8.62/LICENSE-APACHE",
+          "sha256": "9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3"
+        },
+        {
+          "path": "zerocopy-derive-0.8.62/LICENSE-BSD",
+          "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32"
+        },
+        {
+          "path": "zerocopy-derive-0.8.62/LICENSE-MIT",
+          "sha256": "1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df"
+        }
+      ]
+    },
+    {
+      "name": "zerocopy-derive",
+      "version": "0.8.63",
+      "license": "BSD-2-Clause OR Apache-2.0 OR MIT",
+      "repository": "https://github.com/google/zerocopy",
+      "crate_url": "https://crates.io/crates/zerocopy-derive/0.8.63",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "863ad3ac83293fb4d740aedbfdc9240dd8d1a50c1099acd76ce80ce7c7230c7f",
+      "lockfiles": [
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "zerocopy-derive-0.8.63/LICENSE-APACHE",
+          "sha256": "9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3"
+        },
+        {
+          "path": "zerocopy-derive-0.8.63/LICENSE-BSD",
+          "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32"
+        },
+        {
+          "path": "zerocopy-derive-0.8.63/LICENSE-MIT",
+          "sha256": "1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df"
+        }
+      ]
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.23",
+      "license": "MIT",
+      "repository": "https://github.com/dtolnay/zmij",
+      "crate_url": "https://crates.io/crates/zmij/1.0.23",
+      "registry_source": "registry+https://github.com/rust-lang/crates.io-index",
+      "crate_checksum": "29666d0abbfad1e3dc4dcf6144730dd3a3ab225bbbdac83319345b1b44ccfc1b",
+      "lockfiles": [
+        "Cargo.lock",
+        "local-game/native-portable/Cargo.lock",
+        "local-models/four-level-20261018/splendor_local/vendor/native/Cargo.lock"
+      ],
+      "license_files": [
+        {
+          "path": "zmij-1.0.23/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    }
+  ]
+}

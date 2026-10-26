@@ -1,0 +1,18 @@
+[package]
+name = "splendor-pv-noble-search"
+version = "0.1.0"
+edition = "2021"
+[workspace]
+[lib]
+name = "splendor_pv_noble_search"
+crate-type = ["cdylib", "rlib"]
+[dependencies]
+splendor-core = { package = "splendor-noble-core", path = "core" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rand = { version = "0.9", default-features = false, features = ["std"] }
+rand_chacha = "0.9"
+pyo3 = { version = "0.23", features = ["extension-module", "abi3-py39"] }
+
+[build-dependencies]
+pyo3-build-config = "0.23"

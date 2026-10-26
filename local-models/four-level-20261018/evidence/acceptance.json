@@ -1,0 +1,514 @@
+{
+  "functional_replays": {
+    "base_transitions": 111,
+    "extra_transitions": 110,
+    "base_actions": [
+      26,
+      15,
+      23,
+      18,
+      19,
+      20,
+      48,
+      78,
+      78,
+      81,
+      81,
+      48,
+      77,
+      79,
+      80,
+      81,
+      22,
+      23,
+      45,
+      77,
+      78,
+      79,
+      81,
+      48,
+      77,
+      78,
+      78,
+      79,
+      16,
+      19,
+      45,
+      78,
+      78,
+      79,
+      45,
+      77,
+      80,
+      81,
+      21,
+      45,
+      79,
+      22,
+      15,
+      46,
+      78,
+      78,
+      79,
+      79,
+      22,
+      15,
+      22,
+      61,
+      62,
+      47,
+      77,
+      77,
+      47,
+      77,
+      81,
+      47,
+      48,
+      78,
+      78,
+      45,
+      78,
+      48,
+      47,
+      79,
+      80,
+      47,
+      15,
+      51,
+      79,
+      79,
+      80,
+      52,
+      77,
+      47,
+      77,
+      46,
+      78,
+      47,
+      52,
+      79,
+      80,
+      45,
+      52,
+      25,
+      48,
+      46,
+      77,
+      48,
+      48,
+      48,
+      46,
+      48,
+      51,
+      77,
+      48,
+      66,
+      48,
+      48,
+      46,
+      50,
+      56,
+      81,
+      81,
+      48,
+      46,
+      48,
+      51
+    ],
+    "extra_actions": [
+      26,
+      15,
+      23,
+      18,
+      19,
+      20,
+      48,
+      78,
+      78,
+      81,
+      81,
+      48,
+      77,
+      79,
+      80,
+      81,
+      22,
+      23,
+      45,
+      77,
+      78,
+      79,
+      81,
+      48,
+      77,
+      78,
+      78,
+      79,
+      16,
+      19,
+      45,
+      78,
+      78,
+      79,
+      45,
+      77,
+      80,
+      81,
+      21,
+      45,
+      79,
+      22,
+      15,
+      46,
+      78,
+      78,
+      79,
+      79,
+      22,
+      15,
+      22,
+      61,
+      62,
+      47,
+      77,
+      77,
+      47,
+      77,
+      81,
+      47,
+      48,
+      78,
+      78,
+      45,
+      78,
+      48,
+      47,
+      79,
+      80,
+      47,
+      15,
+      51,
+      79,
+      79,
+      80,
+      52,
+      77,
+      47,
+      77,
+      46,
+      78,
+      47,
+      52,
+      79,
+      80,
+      45,
+      52,
+      25,
+      48,
+      46,
+      77,
+      48,
+      48,
+      48,
+      46,
+      48,
+      51,
+      77,
+      48,
+      48,
+      48,
+      46,
+      50,
+      56,
+      81,
+      81,
+      48,
+      46,
+      48,
+      51
+    ],
+    "matches_for_strength": 0,
+    "gradient_updates": 0
+  },
+  "inventory": {
+    "passed": true,
+    "files": [
+      {
+        "path": "weights/s422-100M.pt",
+        "sha256": "17d75ad26a7134a7874b2fbc873061e56cfb7b4ec5a920231c8f7dca676d993d"
+      },
+      {
+        "path": "weights/s422-200M.pt",
+        "sha256": "a0c73a3c5d6b8f71704c98a53da2848be2a63e33c4cad563f7ddf060def4600e"
+      },
+      {
+        "path": "weights/PV422-inference.pt",
+        "sha256": "cef25fcd177d96d7e8aa458756f27553ba550f4fd7a131c8d5217386e5ff545e"
+      },
+      {
+        "path": "splendor_local/vendor/model.py",
+        "sha256": "1e784710ecc86dd5227d7473e0e74e9dc5c094643639f695686607ef42a826f4"
+      },
+      {
+        "path": "splendor_local/vendor/original_model.py",
+        "sha256": "5867fdca1b7f341abe2faa7eed1ad8dc72532e5a6aeb22b9ad39eb27d93c2550"
+      },
+      {
+        "path": "splendor_local/vendor/legacy_model.py",
+        "sha256": "aa1965f631790572bf3f56011e1cbc98506e917b5509a8e400a60c047dabc3a3"
+      },
+      {
+        "path": "splendor_local/vendor/noble_model.py",
+        "sha256": "f03242aec42e0053e2cfc78cdb8ac5f23b853cbb9c2a4ce0356d0c6c23d15944"
+      },
+      {
+        "path": "splendor_local/vendor/search.py",
+        "sha256": "4ceff6656f2127247fb79677d86028f340bfecd979fa74f07106545bbf48647d"
+      },
+      {
+        "path": "splendor_local/vendor/native/Cargo.toml",
+        "sha256": "10e3022f239ef69485c1cbaee088b370671903c1bdd07c53fdf8d7711915fe60"
+      },
+      {
+        "path": "splendor_local/vendor/native/Cargo.lock",
+        "sha256": "4be1941fd02399d6a7301aaf280ec364a1fe7f620de855bbca13b76c4085ad5e"
+      },
+      {
+        "path": "splendor_local/vendor/native/build.rs",
+        "sha256": "c609c2f1a8594abf959388e559d76241e51b0216faa7b37f529255eb1fc2c5eb"
+      },
+      {
+        "path": "splendor_local/vendor/native/core/Cargo.toml",
+        "sha256": "85c2b23b09690f0d673da6e4b5d4f1cb04afdedf2f7e5f3de4666d5282bd5ca5"
+      },
+      {
+        "path": "splendor_local/vendor/native/src/belief.rs",
+        "sha256": "0809680ab0a3dcfffdc63bacf6ed9edc319d06c39f835776c61b647389c8a832"
+      },
+      {
+        "path": "splendor_local/vendor/native/src/lib.rs",
+        "sha256": "8a8cacf4f37cfd3931fc2ce4384ed805789573ad45fac03860ebefc76590c59d"
+      },
+      {
+        "path": "splendor_local/vendor/native/src/tests.rs",
+        "sha256": "a043708e4be7cd31c236ca397601f6f8fdf4f0c9d35aecbb783695d241599671"
+      },
+      {
+        "path": "splendor_local/vendor/native/core/src/game.rs",
+        "sha256": "e44fd5afdad2692ec784691cc3a503db67c6f658c359556963453a44b72d3b50"
+      },
+      {
+        "path": "splendor_local/vendor/native/core/src/bots.rs",
+        "sha256": "43f06b0cf578b0ff2bfa8c6480a0a9e0d82c205ac9a8257fc5d8dc12443d0426"
+      },
+      {
+        "path": "splendor_local/vendor/native/core/src/encode.rs",
+        "sha256": "9dbde6e967039173135e495178a413bcc421c1f4bffdefbbf756a16d8071ae55"
+      },
+      {
+        "path": "splendor_local/vendor/native/core/src/lib.rs",
+        "sha256": "aa06057687aa784f560dc8757ff8889216f2d35c1ea56e0c52b99bfa60cc742a"
+      },
+      {
+        "path": "splendor_local/vendor/native/core/src/data.rs",
+        "sha256": "fe9cca204809af37b3a8f69cecdf80b285f15d591f6380034a186de9f2386565"
+      },
+      {
+        "path": "splendor_local/vendor/splendor_pv_noble_search/splendor_pv_noble_search.abi3.so",
+        "sha256": "4d252b1df0d87529d52be74e293b0aa9173d2df7c1553384c5e1eb8c4afe54f4"
+      },
+      {
+        "path": "splendor_local/vendor/splendor_pv_noble_search/__init__.py",
+        "sha256": "b96d68c27d3577d5ec3110556e2a8a14eb0dfa1c5d4a98b1a9a1626f348a52b2"
+      },
+      {
+        "path": "splendor_local/vendor/splendor_pv_noble_search/portable.py",
+        "sha256": "388db8160c6fda41504787fe411ab6b2feeb782a0991bfd169a8ffb6276a172f"
+      },
+      {
+        "path": "splendor_local/vendor/splendor_pv_noble_search/search.wasm",
+        "sha256": "738d7575e272d615f7623069f1fcd0e71c746c7e74320c228751c13155acfa21"
+      },
+      {
+        "path": "splendor_local/vendor/splendor_pv_noble_search/static.json",
+        "sha256": "52323d3ad92bb25066bd690cd321b0598b7100908b7d0b61d606b07e3de8f682"
+      }
+    ],
+    "downloads": 0
+  },
+  "loaded_parameter_counts": {
+    "s422-100M": 1263745,
+    "s422-200M": 1263745,
+    "PV422": 12985352
+  },
+  "legacy_migration": {
+    "s422-100M": {
+      "states": 112,
+      "max_policy_abs": 2.86102294921875e-06,
+      "max_raw_value_abs": 7.748603820800781e-07,
+      "max_legal_logit_abs": 4.482269287109375e-05,
+      "argmax_agreement": 1.0
+    },
+    "s422-200M": {
+      "states": 112,
+      "max_policy_abs": 3.993511199951172e-06,
+      "max_raw_value_abs": 1.1920928955078125e-06,
+      "max_legal_logit_abs": 2.580881118774414e-05,
+      "argmax_agreement": 1.0
+    }
+  },
+  "pv_base_parity": {
+    "PV422": {
+      "states": 112,
+      "max_policy_abs": 2.980232238769531e-07,
+      "max_value_abs": 3.2782554626464844e-07,
+      "argmax_agreement": 1.0
+    }
+  },
+  "legal_adapter_predictions": 450,
+  "covered_phases": [
+    "ChooseNoble",
+    "Discard",
+    "PayCard",
+    "Play"
+  ],
+  "noble_invariance": {
+    "s422-100M": {
+      "catalog_reindex_exact": true,
+      "slot_permutation_max_abs": 1.1920928955078125e-07
+    },
+    "s422-200M": {
+      "catalog_reindex_exact": true,
+      "slot_permutation_max_abs": 8.940696716308594e-08
+    },
+    "PV422": {
+      "catalog_reindex_exact": true,
+      "slot_permutation_max_abs": 1.1920928955078125e-07
+    }
+  },
+  "extra_scoring": [
+    {
+      "requirements": [
+        0,
+        3,
+        3,
+        0,
+        3
+      ],
+      "points": 3,
+      "final_points": 15
+    },
+    {
+      "requirements": [
+        4,
+        0,
+        0,
+        4,
+        0
+      ],
+      "points": 3,
+      "final_points": 15
+    },
+    {
+      "requirements": [
+        1,
+        2,
+        3,
+        1,
+        0
+      ],
+      "points": 4,
+      "final_points": 15
+    }
+  ],
+  "rejected_invalid_cases": 10,
+  "hidden_world_invariance": true,
+  "search_functional_timing": [
+    {
+      "phase": "Play",
+      "profile": "hard",
+      "simulations": 128,
+      "wall_seconds": 0.6949157090857625,
+      "action_index": 20,
+      "max_depth": 4
+    },
+    {
+      "phase": "Play",
+      "profile": "hell",
+      "simulations": 256,
+      "wall_seconds": 1.3718547918833792,
+      "action_index": 20,
+      "max_depth": 4
+    },
+    {
+      "phase": "PayCard",
+      "profile": "hard",
+      "simulations": 128,
+      "wall_seconds": 0.6804138750303537,
+      "action_index": 77,
+      "max_depth": 4
+    },
+    {
+      "phase": "PayCard",
+      "profile": "hell",
+      "simulations": 256,
+      "wall_seconds": 1.3629330408293754,
+      "action_index": 77,
+      "max_depth": 5
+    },
+    {
+      "phase": "Discard",
+      "profile": "hard",
+      "simulations": 128,
+      "wall_seconds": 0.6542283748276532,
+      "action_index": 64,
+      "max_depth": 3
+    },
+    {
+      "phase": "Discard",
+      "profile": "hell",
+      "simulations": 256,
+      "wall_seconds": 1.2955240840092301,
+      "action_index": 64,
+      "max_depth": 3
+    },
+    {
+      "phase": "ChooseNoble",
+      "profile": "hard",
+      "simulations": 128,
+      "wall_seconds": 0.02513787499628961,
+      "action_index": 66,
+      "max_depth": 2
+    },
+    {
+      "phase": "ChooseNoble",
+      "profile": "hell",
+      "simulations": 256,
+      "wall_seconds": 0.025950124952942133,
+      "action_index": 66,
+      "max_depth": 2
+    }
+  ],
+  "forced_bypass_without_loading": true,
+  "independent_calibrated_value": true,
+  "hint_selector": {
+    "independent": true,
+    "off": true,
+    "all_four_profiles_selectable": true
+  },
+  "jsonl_protocol": {
+    "requests": 6,
+    "error_recovery": true
+  },
+  "horizon": {
+    "forced_cutoffs": 29,
+    "horizon_evaluations": 29,
+    "root_value": 0.375,
+    "simulations": 128
+  },
+  "passed": true,
+  "tests_run": 13,
+  "seconds": 10.820771584054455,
+  "failures": [],
+  "weights_unchanged": true
+}

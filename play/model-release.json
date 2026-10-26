@@ -1,0 +1,47 @@
+{
+  "format": "splendor-desktop-model-release/1",
+  "release": "2026.10.16-Transformer-100M-200M",
+  "architecture": {
+    "family": "original-transformer160x4",
+    "width": 160,
+    "blocks": 4,
+    "heads": 8,
+    "ff_width": 640,
+    "parameters": 1261819,
+    "encoding_version": 2,
+    "observations": 315,
+    "actions": 83,
+    "dtype": "float32",
+    "quantization": null
+  },
+  "default_opponent": "simple",
+  "hint_model": "transformer200m",
+  "models": [
+    {
+      "key": "transformer100m",
+      "model_id": "original-transformer160x4-s422-t100000000",
+      "display_name": "AI模型简单",
+      "cumulative_samples": 100000000,
+      "checkpoint_sha256": "17d75ad26a7134a7874b2fbc873061e56cfb7b4ec5a920231c8f7dca676d993d",
+      "full_checkpoint_sha256": "a710e00c0439fe7eeceb9a9eb5bd813f0ef7b7e0b1efda25ceab40ba56efd0de",
+      "state_dict_sha256": "0d4a39de8b7848a83616a9f4e488fe1cc82a900f67029eb60e5e831bb26031b3",
+      "weights_sha256": "9a77db18dae7347167098d7d9f25f5355f7c61b297a2540578ed58e58d305515",
+      "byte_length": 5047276,
+      "parameter_count": 1261819,
+      "architecture_source_sha256": "bd6166f907da38948f67bc6cb726c7000ccc6299e65e8eddf6c2c81785a65f28"
+    },
+    {
+      "key": "transformer200m",
+      "model_id": "original-transformer160x4-s422-t200000000",
+      "display_name": "AI模型中等",
+      "cumulative_samples": 200000000,
+      "checkpoint_sha256": "a0c73a3c5d6b8f71704c98a53da2848be2a63e33c4cad563f7ddf060def4600e",
+      "full_checkpoint_sha256": "91639b08f7e55d15f02ce8c2261fe54afafd30389254324a88ae5d7d738b117f",
+      "state_dict_sha256": "348623630b5fdb279ff668e980367d9d5d04335bd7f011e61bb30ac3e8acb037",
+      "weights_sha256": "4eac5c0187ad3f74619c2062584c9e169975a559758174c1a54dd80e3e806179",
+      "byte_length": 5047276,
+      "parameter_count": 1261819,
+      "architecture_source_sha256": "bd6166f907da38948f67bc6cb726c7000ccc6299e65e8eddf6c2c81785a65f28"
+    }
+  ]
+}

@@ -1,0 +1,653 @@
+{
+  "format": "splendor-browser-transformer/1",
+  "model_id": "original-transformer160x4-s422-t200000000",
+  "display_name": "AI模型中等",
+  "architecture": "transformer160x4",
+  "width": 160,
+  "blocks": 4,
+  "heads": 8,
+  "ff_width": 640,
+  "norm_first": true,
+  "layer_norm_eps": 1e-05,
+  "activation": "gelu-exact",
+  "dropout": 0,
+  "tokens": 20,
+  "roles": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    5,
+    6
+  ],
+  "fixed_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    42,
+    43,
+    44,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82
+  ],
+  "train_seed": 422,
+  "cumulative_samples": 200000000,
+  "encoding_version": 2,
+  "obs_len": 315,
+  "num_actions": 83,
+  "num_players": 2,
+  "ruleset": "base",
+  "action_schema": "splendor-v2-83",
+  "dtype": "float32-le",
+  "quantization": null,
+  "parameter_count": 1261819,
+  "parameters": [
+    {
+      "name": "card.weight",
+      "shape": [
+        160,
+        12
+      ],
+      "offset": 0,
+      "length": 1920
+    },
+    {
+      "name": "card.bias",
+      "shape": [
+        160
+      ],
+      "offset": 1920,
+      "length": 160
+    },
+    {
+      "name": "reserve_meta.weight",
+      "shape": [
+        160,
+        3
+      ],
+      "offset": 2080,
+      "length": 480
+    },
+    {
+      "name": "global_encoder.weight",
+      "shape": [
+        160,
+        69
+      ],
+      "offset": 2560,
+      "length": 11040
+    },
+    {
+      "name": "global_encoder.bias",
+      "shape": [
+        160
+      ],
+      "offset": 13600,
+      "length": 160
+    },
+    {
+      "name": "roles.weight",
+      "shape": [
+        7,
+        160
+      ],
+      "offset": 13760,
+      "length": 1120
+    },
+    {
+      "name": "blocks.0.self_attn.in_proj_weight",
+      "shape": [
+        480,
+        160
+      ],
+      "offset": 14880,
+      "length": 76800
+    },
+    {
+      "name": "blocks.0.self_attn.in_proj_bias",
+      "shape": [
+        480
+      ],
+      "offset": 91680,
+      "length": 480
+    },
+    {
+      "name": "blocks.0.self_attn.out_proj.weight",
+      "shape": [
+        160,
+        160
+      ],
+      "offset": 92160,
+      "length": 25600
+    },
+    {
+      "name": "blocks.0.self_attn.out_proj.bias",
+      "shape": [
+        160
+      ],
+      "offset": 117760,
+      "length": 160
+    },
+    {
+      "name": "blocks.0.linear1.weight",
+      "shape": [
+        640,
+        160
+      ],
+      "offset": 117920,
+      "length": 102400
+    },
+    {
+      "name": "blocks.0.linear1.bias",
+      "shape": [
+        640
+      ],
+      "offset": 220320,
+      "length": 640
+    },
+    {
+      "name": "blocks.0.linear2.weight",
+      "shape": [
+        160,
+        640
+      ],
+      "offset": 220960,
+      "length": 102400
+    },
+    {
+      "name": "blocks.0.linear2.bias",
+      "shape": [
+        160
+      ],
+      "offset": 323360,
+      "length": 160
+    },
+    {
+      "name": "blocks.0.norm1.weight",
+      "shape": [
+        160
+      ],
+      "offset": 323520,
+      "length": 160
+    },
+    {
+      "name": "blocks.0.norm1.bias",
+      "shape": [
+        160
+      ],
+      "offset": 323680,
+      "length": 160
+    },
+    {
+      "name": "blocks.0.norm2.weight",
+      "shape": [
+        160
+      ],
+      "offset": 323840,
+      "length": 160
+    },
+    {
+      "name": "blocks.0.norm2.bias",
+      "shape": [
+        160
+      ],
+      "offset": 324000,
+      "length": 160
+    },
+    {
+      "name": "blocks.1.self_attn.in_proj_weight",
+      "shape": [
+        480,
+        160
+      ],
+      "offset": 324160,
+      "length": 76800
+    },
+    {
+      "name": "blocks.1.self_attn.in_proj_bias",
+      "shape": [
+        480
+      ],
+      "offset": 400960,
+      "length": 480
+    },
+    {
+      "name": "blocks.1.self_attn.out_proj.weight",
+      "shape": [
+        160,
+        160
+      ],
+      "offset": 401440,
+      "length": 25600
+    },
+    {
+      "name": "blocks.1.self_attn.out_proj.bias",
+      "shape": [
+        160
+      ],
+      "offset": 427040,
+      "length": 160
+    },
+    {
+      "name": "blocks.1.linear1.weight",
+      "shape": [
+        640,
+        160
+      ],
+      "offset": 427200,
+      "length": 102400
+    },
+    {
+      "name": "blocks.1.linear1.bias",
+      "shape": [
+        640
+      ],
+      "offset": 529600,
+      "length": 640
+    },
+    {
+      "name": "blocks.1.linear2.weight",
+      "shape": [
+        160,
+        640
+      ],
+      "offset": 530240,
+      "length": 102400
+    },
+    {
+      "name": "blocks.1.linear2.bias",
+      "shape": [
+        160
+      ],
+      "offset": 632640,
+      "length": 160
+    },
+    {
+      "name": "blocks.1.norm1.weight",
+      "shape": [
+        160
+      ],
+      "offset": 632800,
+      "length": 160
+    },
+    {
+      "name": "blocks.1.norm1.bias",
+      "shape": [
+        160
+      ],
+      "offset": 632960,
+      "length": 160
+    },
+    {
+      "name": "blocks.1.norm2.weight",
+      "shape": [
+        160
+      ],
+      "offset": 633120,
+      "length": 160
+    },
+    {
+      "name": "blocks.1.norm2.bias",
+      "shape": [
+        160
+      ],
+      "offset": 633280,
+      "length": 160
+    },
+    {
+      "name": "blocks.2.self_attn.in_proj_weight",
+      "shape": [
+        480,
+        160
+      ],
+      "offset": 633440,
+      "length": 76800
+    },
+    {
+      "name": "blocks.2.self_attn.in_proj_bias",
+      "shape": [
+        480
+      ],
+      "offset": 710240,
+      "length": 480
+    },
+    {
+      "name": "blocks.2.self_attn.out_proj.weight",
+      "shape": [
+        160,
+        160
+      ],
+      "offset": 710720,
+      "length": 25600
+    },
+    {
+      "name": "blocks.2.self_attn.out_proj.bias",
+      "shape": [
+        160
+      ],
+      "offset": 736320,
+      "length": 160
+    },
+    {
+      "name": "blocks.2.linear1.weight",
+      "shape": [
+        640,
+        160
+      ],
+      "offset": 736480,
+      "length": 102400
+    },
+    {
+      "name": "blocks.2.linear1.bias",
+      "shape": [
+        640
+      ],
+      "offset": 838880,
+      "length": 640
+    },
+    {
+      "name": "blocks.2.linear2.weight",
+      "shape": [
+        160,
+        640
+      ],
+      "offset": 839520,
+      "length": 102400
+    },
+    {
+      "name": "blocks.2.linear2.bias",
+      "shape": [
+        160
+      ],
+      "offset": 941920,
+      "length": 160
+    },
+    {
+      "name": "blocks.2.norm1.weight",
+      "shape": [
+        160
+      ],
+      "offset": 942080,
+      "length": 160
+    },
+    {
+      "name": "blocks.2.norm1.bias",
+      "shape": [
+        160
+      ],
+      "offset": 942240,
+      "length": 160
+    },
+    {
+      "name": "blocks.2.norm2.weight",
+      "shape": [
+        160
+      ],
+      "offset": 942400,
+      "length": 160
+    },
+    {
+      "name": "blocks.2.norm2.bias",
+      "shape": [
+        160
+      ],
+      "offset": 942560,
+      "length": 160
+    },
+    {
+      "name": "blocks.3.self_attn.in_proj_weight",
+      "shape": [
+        480,
+        160
+      ],
+      "offset": 942720,
+      "length": 76800
+    },
+    {
+      "name": "blocks.3.self_attn.in_proj_bias",
+      "shape": [
+        480
+      ],
+      "offset": 1019520,
+      "length": 480
+    },
+    {
+      "name": "blocks.3.self_attn.out_proj.weight",
+      "shape": [
+        160,
+        160
+      ],
+      "offset": 1020000,
+      "length": 25600
+    },
+    {
+      "name": "blocks.3.self_attn.out_proj.bias",
+      "shape": [
+        160
+      ],
+      "offset": 1045600,
+      "length": 160
+    },
+    {
+      "name": "blocks.3.linear1.weight",
+      "shape": [
+        640,
+        160
+      ],
+      "offset": 1045760,
+      "length": 102400
+    },
+    {
+      "name": "blocks.3.linear1.bias",
+      "shape": [
+        640
+      ],
+      "offset": 1148160,
+      "length": 640
+    },
+    {
+      "name": "blocks.3.linear2.weight",
+      "shape": [
+        160,
+        640
+      ],
+      "offset": 1148800,
+      "length": 102400
+    },
+    {
+      "name": "blocks.3.linear2.bias",
+      "shape": [
+        160
+      ],
+      "offset": 1251200,
+      "length": 160
+    },
+    {
+      "name": "blocks.3.norm1.weight",
+      "shape": [
+        160
+      ],
+      "offset": 1251360,
+      "length": 160
+    },
+    {
+      "name": "blocks.3.norm1.bias",
+      "shape": [
+        160
+      ],
+      "offset": 1251520,
+      "length": 160
+    },
+    {
+      "name": "blocks.3.norm2.weight",
+      "shape": [
+        160
+      ],
+      "offset": 1251680,
+      "length": 160
+    },
+    {
+      "name": "blocks.3.norm2.bias",
+      "shape": [
+        160
+      ],
+      "offset": 1251840,
+      "length": 160
+    },
+    {
+      "name": "norm.weight",
+      "shape": [
+        160
+      ],
+      "offset": 1252000,
+      "length": 160
+    },
+    {
+      "name": "norm.bias",
+      "shape": [
+        160
+      ],
+      "offset": 1252160,
+      "length": 160
+    },
+    {
+      "name": "fixed.weight",
+      "shape": [
+        56,
+        160
+      ],
+      "offset": 1252320,
+      "length": 8960
+    },
+    {
+      "name": "fixed.bias",
+      "shape": [
+        56
+      ],
+      "offset": 1261280,
+      "length": 56
+    },
+    {
+      "name": "buy.weight",
+      "shape": [
+        1,
+        160
+      ],
+      "offset": 1261336,
+      "length": 160
+    },
+    {
+      "name": "buy.bias",
+      "shape": [
+        1
+      ],
+      "offset": 1261496,
+      "length": 1
+    },
+    {
+      "name": "reserve.weight",
+      "shape": [
+        1,
+        160
+      ],
+      "offset": 1261497,
+      "length": 160
+    },
+    {
+      "name": "reserve.bias",
+      "shape": [
+        1
+      ],
+      "offset": 1261657,
+      "length": 1
+    },
+    {
+      "name": "value.weight",
+      "shape": [
+        1,
+        160
+      ],
+      "offset": 1261658,
+      "length": 160
+    },
+    {
+      "name": "value.bias",
+      "shape": [
+        1
+      ],
+      "offset": 1261818,
+      "length": 1
+    }
+  ],
+  "byte_length": 5047276,
+  "weights_sha256": "4eac5c0187ad3f74619c2062584c9e169975a559758174c1a54dd80e3e806179",
+  "state_dict_sha256": "348623630b5fdb279ff668e980367d9d5d04335bd7f011e61bb30ac3e8acb037",
+  "checkpoint_sha256": "a0c73a3c5d6b8f71704c98a53da2848be2a63e33c4cad563f7ddf060def4600e",
+  "full_checkpoint_sha256": "91639b08f7e55d15f02ce8c2261fe54afafd30389254324a88ae5d7d738b117f",
+  "checkpoint_format": "splendor-transformer-extension/1",
+  "source_filename": "s422-200M.pt",
+  "architecture_source_sha256": "bd6166f907da38948f67bc6cb726c7000ccc6299e65e8eddf6c2c81785a65f28",
+  "selection": "legal-mask-argmax-lowest-index-tie"
+}

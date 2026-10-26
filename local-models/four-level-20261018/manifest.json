@@ -1,0 +1,228 @@
+{
+  "format": "splendor-local-four-level/1",
+  "created_at": "2026-10-17T17:34:11.867773+00:00",
+  "scope": "Local two-player browser game and CPU inference",
+  "observation_version": "splendor-pv-attribute-nobles-v1",
+  "encoder_version": 2,
+  "legacy_input_size": 350,
+  "pv_tokens": 33,
+  "pv_token_features": 128,
+  "action_version": "83-v2-public-noble-slots-v1",
+  "action_count": 83,
+  "noble_action": "66 + current available noble slot; never 66 + external/catalog ID",
+  "models": {
+    "s422-100M": {
+      "path": "weights/s422-100M.pt",
+      "sha256": "17d75ad26a7134a7874b2fbc873061e56cfb7b4ec5a920231c8f7dca676d993d",
+      "bytes": 5068748,
+      "seed": 422,
+      "training_node": {
+        "unit": "atomic_actions",
+        "count": 100000000,
+        "label": "frozen checkpoint"
+      },
+      "architecture": {
+        "width": 160,
+        "depth": 4,
+        "heads": 8,
+        "ff": 640,
+        "tokens": 20,
+        "original_parameters": 1261819,
+        "adapted_parameters": 1263745
+      },
+      "source_sha256": null,
+      "value_temperature": null,
+      "components": {
+        "state_dict": {
+          "tensor_sha256": "95aca6630c74245e592f4e3fad7b8dfd87261d4454d23f29c74b0c9d60e4ceea",
+          "checkpoint_key": "state_dict"
+        }
+      }
+    },
+    "s422-200M": {
+      "path": "weights/s422-200M.pt",
+      "sha256": "a0c73a3c5d6b8f71704c98a53da2848be2a63e33c4cad563f7ddf060def4600e",
+      "bytes": 5068748,
+      "seed": 422,
+      "training_node": {
+        "unit": "atomic_actions",
+        "count": 200000000,
+        "label": "frozen checkpoint"
+      },
+      "architecture": {
+        "width": 160,
+        "depth": 4,
+        "heads": 8,
+        "ff": 640,
+        "tokens": 20,
+        "original_parameters": 1261819,
+        "adapted_parameters": 1263745
+      },
+      "source_sha256": null,
+      "value_temperature": null,
+      "components": {
+        "state_dict": {
+          "tensor_sha256": "3446799920021018fd559de756e3a0fe10d5bd009b92c6f293367ead2aac85df",
+          "checkpoint_key": "state_dict"
+        }
+      }
+    },
+    "PV422": {
+      "path": "weights/PV422-inference.pt",
+      "sha256": "cef25fcd177d96d7e8aa458756f27553ba550f4fd7a131c8d5217386e5ff545e",
+      "bytes": 52008259,
+      "seed": 422,
+      "training_node": {
+        "unit": "student_games",
+        "count": 2048,
+        "label": "final"
+      },
+      "architecture": {
+        "width": 256,
+        "depth": 8,
+        "heads": 8,
+        "ff": 1024,
+        "dropout": 0.0,
+        "tokens": 33,
+        "parameters_per_network": 6492676,
+        "policy_plus_value_parameters": 12985352
+      },
+      "source_sha256": "b800562be062e1547440fe24f521310705817b5dec8474f864ab6af3860d936a",
+      "value_temperature": 1.3740903342345823,
+      "components": {
+        "policy": {
+          "tensor_sha256": "2eb4b7f08cd5562a7b0f1c2f445e2bf4381bbed415045497b7cfd3cdc1dec06d",
+          "checkpoint_key": "policy",
+          "role": "policy logits only; its own value output is not used"
+        },
+        "state_dict": {
+          "tensor_sha256": "81ddbb3dbe3d3f09985fb1d3056b7e66375cb8d7d94c405b3ee38d11b24c339a",
+          "checkpoint_key": "state_dict",
+          "role": "independent WDL value; LOSS,DRAW,WIN; expectation WIN-LOSS after temperature"
+        }
+      }
+    }
+  },
+  "profiles": {
+    "easy": {
+      "model": "s422-100M",
+      "simulations": 0
+    },
+    "medium": {
+      "model": "s422-200M",
+      "simulations": 0
+    },
+    "hard": {
+      "model": "PV422",
+      "simulations": 128
+    },
+    "hell": {
+      "model": "PV422",
+      "simulations": 256
+    }
+  },
+  "search": {
+    "opponent_model": "s422-200M",
+    "cpuct": 1.5,
+    "max_root_decisions_and_completed_rounds": 128,
+    "atomic_guard": 4096,
+    "root_noise": false,
+    "unique_legal_action": "bypass network and search",
+    "terminal": "exact scoring before finite horizon; horizon uses root value; never fabricated draw"
+  },
+  "vendor_files": {
+    "splendor_local/vendor/model.py": {
+      "sha256": "1e784710ecc86dd5227d7473e0e74e9dc5c094643639f695686607ef42a826f4"
+    },
+    "splendor_local/vendor/original_model.py": {
+      "sha256": "5867fdca1b7f341abe2faa7eed1ad8dc72532e5a6aeb22b9ad39eb27d93c2550"
+    },
+    "splendor_local/vendor/legacy_model.py": {
+      "sha256": "aa1965f631790572bf3f56011e1cbc98506e917b5509a8e400a60c047dabc3a3"
+    },
+    "splendor_local/vendor/noble_model.py": {
+      "sha256": "f03242aec42e0053e2cfc78cdb8ac5f23b853cbb9c2a4ce0356d0c6c23d15944"
+    },
+    "splendor_local/vendor/search.py": {
+      "sha256": "4ceff6656f2127247fb79677d86028f340bfecd979fa74f07106545bbf48647d"
+    },
+    "splendor_local/vendor/native/Cargo.toml": {
+      "sha256": "10e3022f239ef69485c1cbaee088b370671903c1bdd07c53fdf8d7711915fe60"
+    },
+    "splendor_local/vendor/native/Cargo.lock": {
+      "sha256": "4be1941fd02399d6a7301aaf280ec364a1fe7f620de855bbca13b76c4085ad5e"
+    },
+    "splendor_local/vendor/native/build.rs": {
+      "sha256": "c609c2f1a8594abf959388e559d76241e51b0216faa7b37f529255eb1fc2c5eb"
+    },
+    "splendor_local/vendor/native/core/Cargo.toml": {
+      "sha256": "85c2b23b09690f0d673da6e4b5d4f1cb04afdedf2f7e5f3de4666d5282bd5ca5"
+    },
+    "splendor_local/vendor/native/src/belief.rs": {
+      "sha256": "0809680ab0a3dcfffdc63bacf6ed9edc319d06c39f835776c61b647389c8a832"
+    },
+    "splendor_local/vendor/native/src/lib.rs": {
+      "sha256": "8a8cacf4f37cfd3931fc2ce4384ed805789573ad45fac03860ebefc76590c59d"
+    },
+    "splendor_local/vendor/native/src/tests.rs": {
+      "sha256": "a043708e4be7cd31c236ca397601f6f8fdf4f0c9d35aecbb783695d241599671"
+    },
+    "splendor_local/vendor/native/core/src/game.rs": {
+      "sha256": "e44fd5afdad2692ec784691cc3a503db67c6f658c359556963453a44b72d3b50"
+    },
+    "splendor_local/vendor/native/core/src/bots.rs": {
+      "sha256": "43f06b0cf578b0ff2bfa8c6480a0a9e0d82c205ac9a8257fc5d8dc12443d0426"
+    },
+    "splendor_local/vendor/native/core/src/encode.rs": {
+      "sha256": "9dbde6e967039173135e495178a413bcc421c1f4bffdefbbf756a16d8071ae55"
+    },
+    "splendor_local/vendor/native/core/src/lib.rs": {
+      "sha256": "aa06057687aa784f560dc8757ff8889216f2d35c1ea56e0c52b99bfa60cc742a"
+    },
+    "splendor_local/vendor/native/core/src/data.rs": {
+      "sha256": "fe9cca204809af37b3a8f69cecdf80b285f15d591f6380034a186de9f2386565"
+    },
+    "splendor_local/vendor/splendor_pv_noble_search/splendor_pv_noble_search.abi3.so": {
+      "sha256": "4d252b1df0d87529d52be74e293b0aa9173d2df7c1553384c5e1eb8c4afe54f4"
+    },
+    "splendor_local/vendor/splendor_pv_noble_search/__init__.py": {
+      "sha256": "b96d68c27d3577d5ec3110556e2a8a14eb0dfa1c5d4a98b1a9a1626f348a52b2"
+    },
+    "splendor_local/vendor/splendor_pv_noble_search/portable.py": {
+      "sha256": "388db8160c6fda41504787fe411ab6b2feeb782a0991bfd169a8ffb6276a172f"
+    },
+    "splendor_local/vendor/splendor_pv_noble_search/search.wasm": {
+      "sha256": "738d7575e272d615f7623069f1fcd0e71c746c7e74320c228751c13155acfa21"
+    },
+    "splendor_local/vendor/splendor_pv_noble_search/static.json": {
+      "sha256": "52323d3ad92bb25066bd690cd321b0598b7100908b7d0b61d606b07e3de8f682"
+    }
+  },
+  "verified_environment": {
+    "python": "3.12.15",
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "native_binary": "macOS arm64 abi3; portable SearchCore also provided as WebAssembly"
+  },
+  "limitations": [
+    "Two-player base-game browser interface",
+    "Full public purchased card IDs required for both players",
+    "Hard and hell share PV422 weights; search simulations are 128 and 256",
+    "Search budget is not a calibrated human skill rating"
+  ],
+  "teaching_hints": {
+    "selection": "independent from opponent profile",
+    "choices": [
+      "easy",
+      "medium",
+      "hard",
+      "hell",
+      null
+    ],
+    "default": "medium",
+    "null_means": "off",
+    "settings_scope": "independent persisted selections in local browser game"
+  },
+  "product_integration": "local browser game"
+}

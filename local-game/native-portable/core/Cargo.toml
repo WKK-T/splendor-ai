@@ -1,0 +1,8 @@
+[package]
+name="splendor-noble-core"
+version="0.1.0"
+edition="2021"
+[dependencies]
+serde={version="1",features=["derive"]}
+rand={version="0.9",default-features=false,features=["std"]}
+rand_chacha="0.9"

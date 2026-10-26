@@ -1,0 +1,319 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Splendor Replay</title>
+<style>
+  :root {
+    --bg: #101915;
+    --surface: #18231e;
+    --surface-2: #1f2c26;
+    --line: #2c3a33;
+    --text: #e9e6da;
+    --muted: #93a198;
+    --accent: #d4a017;
+    --accent-ink: #14100a;
+    --gw: #f2efe4; --gu: #3b74c9; --gg: #2f9e57; --gr: #cf3f3f; --gk: #37332d; --gy: #d9a520;
+    --gw-ink: #2b2a24; --gk-ink: #e9e6da;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #eef0ec;
+      --surface: #ffffff;
+      --surface-2: #e4e8e2;
+      --line: #c9d1c9;
+      --text: #232a24;
+      --muted: #63705f;
+      --accent: #a87b0a;
+      --accent-ink: #fffdf5;
+      --gk: #33302c;
+      --gw-ink: #2b2a24; --gk-ink: #f2efe4;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #eef0ec;
+    --surface: #ffffff;
+    --surface-2: #e4e8e2;
+    --line: #c9d1c9;
+    --text: #232a24;
+    --muted: #63705f;
+    --accent: #a87b0a;
+    --accent-ink: #fffdf5;
+    --gk: #33302c;
+    --gw-ink: #2b2a24; --gk-ink: #f2efe4;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .serif { font-family: Palatino, "Palatino Linotype", Georgia, serif; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+  header {
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    padding: 10px 18px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 2;
+  }
+  .wordmark { font-style: italic; font-size: 19px; color: var(--accent); letter-spacing: 0.02em; }
+  .wordmark small { font-style: normal; color: var(--muted); font-size: 11px; margin-left: 6px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .transport { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 260px; }
+  .transport button {
+    background: var(--surface-2); color: var(--text);
+    border: 1px solid var(--line); border-radius: 6px;
+    padding: 4px 12px; font-size: 14px; cursor: pointer;
+  }
+  .transport button:hover { border-color: var(--accent); }
+  .transport button:focus-visible, .moves li:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .transport input[type=range] { flex: 1; accent-color: var(--accent); }
+  .counter { font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+  .lastmove { color: var(--text); white-space: nowrap; }
+  .meta { color: var(--muted); font-size: 12px; white-space: nowrap; }
+
+  main {
+    display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 18px;
+    padding: 18px; max-width: 1200px; margin: 0 auto;
+  }
+  @media (max-width: 900px) { main { grid-template-columns: minmax(0, 1fr); } }
+
+  .board { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .nobles { display: flex; gap: 10px; flex-wrap: wrap; }
+  .noble {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    padding: 6px 9px; display: flex; align-items: center; gap: 8px;
+  }
+  .noble .pts { font-size: 17px; color: var(--accent); }
+  .tier { display: flex; align-items: center; gap: 10px; }
+  .deck {
+    width: 44px; height: 92px; border-radius: 8px;
+    background: var(--surface-2); border: 1px solid var(--line);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 11px; letter-spacing: 0.1em;
+  }
+  .deck b { font-size: 15px; color: var(--text); font-variant-numeric: tabular-nums; }
+  .slots { display: flex; gap: 10px; flex-wrap: wrap; }
+
+  .card {
+    width: 74px; height: 92px; border-radius: 8px;
+    background: var(--surface); border: 1px solid var(--line);
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 6px; position: relative;
+  }
+  .card.empty { background: transparent; border-style: dashed; }
+  .card .top { display: flex; justify-content: space-between; align-items: center; }
+  .card .pts { font-size: 19px; line-height: 1; }
+  .card .costs { display: flex; gap: 3px; flex-wrap: wrap; }
+  .gem {
+    width: 17px; height: 17px; border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 600; font-variant-numeric: tabular-nums;
+    border: 1px solid var(--line); flex: none;
+  }
+  .diamond { width: 13px; height: 13px; transform: rotate(45deg); border-radius: 3px; border: 1px solid var(--line); flex: none; }
+  .w { background: var(--gw); color: var(--gw-ink); }
+  .u { background: var(--gu); color: #fff; }
+  .g { background: var(--gg); color: #fff; }
+  .r { background: var(--gr); color: #fff; }
+  .k { background: var(--gk); color: var(--gk-ink); }
+  .y { background: var(--gy); color: #14100a; }
+
+  .side { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .panel {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .panel h2 {
+    margin: 0 0 8px; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+  }
+  .tokens { display: flex; gap: 5px; flex-wrap: wrap; }
+  .tokens .gem { width: 24px; height: 24px; font-size: 12px; }
+
+  .player { border-left: 3px solid transparent; }
+  .player.current { border-left-color: var(--accent); }
+  .player .head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .player .name { font-weight: 600; }
+  .player .name .tag { color: var(--muted); font-weight: 400; font-size: 12px; margin-left: 5px; }
+  .player .score { font-size: 22px; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .player .row { display: flex; align-items: center; gap: 5px; margin-top: 5px; flex-wrap: wrap; }
+  .player .row .lbl { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); width: 52px; flex: none; }
+  .mini {
+    border: 1px solid var(--line); background: var(--surface-2); border-radius: 4px;
+    font-size: 10px; padding: 1px 5px; display: inline-flex; align-items: center; gap: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+  .winner-banner {
+    background: var(--accent); color: var(--accent-ink);
+    border-radius: 10px; padding: 8px 12px; font-weight: 600; text-align: center;
+  }
+
+  .moves { flex: 1; min-height: 120px; display: flex; flex-direction: column; }
+  .moves ol {
+    list-style: none; margin: 0; padding: 0;
+    overflow-y: auto; max-height: 300px;
+  }
+  .moves li {
+    padding: 2px 8px; border-radius: 5px; cursor: pointer;
+    font-variant-numeric: tabular-nums; display: flex; gap: 8px;
+  }
+  .moves li:hover { background: var(--surface-2); }
+  .moves li.now { background: var(--accent); color: var(--accent-ink); }
+  .moves li .n { color: var(--muted); width: 30px; flex: none; text-align: right; }
+  .moves li.now .n { color: inherit; }
+  .moves li.cont { padding-left: 30px; }
+  .moves li.cont:not(.now) { color: var(--muted); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .card, .player { transition: border-color 0.15s ease; }
+  }
+</style>
+
+<header>
+  <div class="wordmark serif">Splendor<small>replay</small></div>
+  <div class="transport">
+    <button id="prev" aria-label="Previous move">&#8249;</button>
+    <input type="range" id="slider" min="0" value="0" aria-label="Move number">
+    <button id="next" aria-label="Next move">&#8250;</button>
+    <span class="counter mono" id="counter"></span>
+  </div>
+  <span class="lastmove mono" id="lastmove"></span>
+  <span class="meta" id="meta"></span>
+</header>
+
+<main>
+  <section class="board" aria-label="Board">
+    <div class="nobles" id="nobles"></div>
+    <div id="tiers"></div>
+    <div class="panel">
+      <h2>Bank</h2>
+      <div class="tokens" id="bank"></div>
+    </div>
+  </section>
+  <aside class="side">
+    <div id="winner"></div>
+    <div id="players"></div>
+    <div class="panel moves">
+      <h2>Moves</h2>
+      <ol id="movelist"></ol>
+    </div>
+  </aside>
+</main>
+
+<script>
+const REPLAY = /*__REPLAY_DATA__*/;
+
+const COLORS = ["w", "u", "g", "r", "k"];
+const $ = (id) => document.getElementById(id);
+let idx = 0;
+
+function gem(cls, n) {
+  return `<span class="gem ${cls}">${n}</span>`;
+}
+
+function cardHtml(id) {
+  if (id === null || id === undefined) return `<div class="card empty"></div>`;
+  const c = REPLAY.cards[id];
+  const costs = c.cost
+    .map((n, i) => (n > 0 ? gem(COLORS[i], n) : ""))
+    .join("");
+  const pts = c.points > 0 ? c.points : "";
+  const bonus = COLORS[c.bonus];
+  return `<div class="card" title="tier ${c.tier}">
+    <div class="top"><span class="pts serif">${pts}</span><span class="diamond ${bonus}"></span></div>
+    <div class="costs">${costs}</div>
+  </div>`;
+}
+
+function nobleHtml(id) {
+  const n = REPLAY.nobles[id];
+  const req = n.req.map((v, i) => (v > 0 ? gem(COLORS[i], v) : "")).join("");
+  return `<div class="noble"><span class="pts serif">${n.points}</span>${req}</div>`;
+}
+
+function tokensHtml(tokens) {
+  const kinds = [...COLORS, "y"];
+  return tokens.map((n, i) => (n > 0 ? gem(kinds[i], n) : "")).join("") || `<span class="mini">none</span>`;
+}
+
+function render() {
+  const s = REPLAY.states[idx];
+
+  $("counter").textContent = `action ${idx} / ${REPLAY.states.length - 1}`;
+  const m = idx > 0 ? REPLAY.moves[idx - 1] : null;
+  $("lastmove").textContent = m ? `${m.n} · ${m.label}` : "initial setup";
+  $("slider").value = idx;
+
+  $("nobles").innerHTML = s.nobles.map(nobleHtml).join("");
+
+  $("tiers").innerHTML = [2, 1, 0]
+    .map(
+      (t) => `<div class="tier">
+        <div class="deck"><b>${s.decks[t].length}</b><span>T${t + 1}</span></div>
+        <div class="slots">${s.display[t].map(cardHtml).join("")}</div>
+      </div>`
+    )
+    .join(`<div style="height:8px"></div>`);
+
+  $("bank").innerHTML = tokensHtml(s.bank);
+
+  $("players").innerHTML = s.players
+    .map((p, i) => {
+      const cur = s.phase !== "GameOver" && i === s.current;
+      const phase = cur && s.phase !== "Play" ? ` · ${s.phase}` : "";
+      const reserved = p.reserved.map((id) => {
+        const c = REPLAY.cards[id];
+        return `<span class="mini">T${c.tier} <span class="diamond ${COLORS[c.bonus]}"></span> ${c.points}pt</span>`;
+      }).join("");
+      return `<div class="panel player ${cur ? "current" : ""}">
+        <div class="head">
+          <span class="name">${REPLAY.players[i]}<span class="tag">${cur ? "to move" + phase : ""}</span></span>
+          <span class="score serif">${p.points}</span>
+        </div>
+        <div class="row"><span class="lbl">Tokens</span>${tokensHtml(p.tokens)}</div>
+        <div class="row"><span class="lbl">Bonuses</span>${p.bonuses.map((n, c) => (n > 0 ? `<span class="mini"><span class="diamond ${COLORS[c]}"></span>${n}</span>` : "")).join("") || `<span class="mini">none</span>`}</div>
+        <div class="row"><span class="lbl">Reserved</span>${reserved || `<span class="mini">none</span>`}</div>
+        <div class="row"><span class="lbl">Cards</span><span class="mini">${p.owned.length} owned</span><span class="mini">${p.nobles.length} nobles</span></div>
+      </div>`;
+    })
+    .join("");
+
+  $("winner").innerHTML =
+    s.phase === "GameOver"
+      ? `<div class="winner-banner">${REPLAY.result}</div>`
+      : "";
+
+  const items = $("movelist").children;
+  for (let i = 0; i < items.length; i++) {
+    items[i].classList.toggle("now", i + 1 === idx);
+  }
+  if (idx > 0 && items[idx - 1]) items[idx - 1].scrollIntoView({ block: "nearest" });
+}
+
+function go(i) {
+  idx = Math.max(0, Math.min(REPLAY.states.length - 1, i));
+  render();
+}
+
+$("slider").max = REPLAY.states.length - 1;
+$("meta").textContent = `seed ${REPLAY.seed}`;
+$("movelist").innerHTML = REPLAY.moves
+  .map((m) => `<li class="mono${m.cont ? " cont" : ""}" tabindex="0"><span class="n">${m.n}</span>${m.label}</li>`)
+  .join("");
+[...$("movelist").children].forEach((li, i) => {
+  li.addEventListener("click", () => go(i + 1));
+  li.addEventListener("keydown", (e) => { if (e.key === "Enter") go(i + 1); });
+});
+$("prev").addEventListener("click", () => go(idx - 1));
+$("next").addEventListener("click", () => go(idx + 1));
+$("slider").addEventListener("input", (e) => go(+e.target.value));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") go(idx - 1);
+  else if (e.key === "ArrowRight") go(idx + 1);
+  else if (e.key === "Home") go(0);
+  else if (e.key === "End") go(REPLAY.states.length - 1);
+});
+render();
+</script>

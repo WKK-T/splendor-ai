@@ -1,0 +1,9 @@
+{
+  "format": "splendor-hint-release/1",
+  "release": "original-transformer160x4-s422-200m-20261016",
+  "model_key": "transformer200m",
+  "metadata": "assets/transformer200m.json",
+  "weights": "assets/transformer200m.bin",
+  "weights_sha256": "4eac5c0187ad3f74619c2062584c9e169975a559758174c1a54dd80e3e806179",
+  "label": "提示模型：原版 Transformer · 200M（seed422）"
+}
